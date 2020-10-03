@@ -15,4 +15,4 @@ He decidido elegir `Node` como lenguaje porque investigando es el que he visto q
 
 # Enlaces adicionales
 
-* [Configuración de git](docs/git.md)
+* [Configuración de git](docs/config_git.md)
