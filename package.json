@@ -1,0 +1,26 @@
+{
+  "name": "vizyourdata",
+  "version": "1.0.0",
+  "description": "Proyecto para la asignatura de Infraestructura Virtual 20-21 de la UGR",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cecimerelo/VizYourData.git"
+  },
+  "author": "Cecilia Merelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cecimerelo/VizYourData/issues"
+  },
+  "homepage": "https://github.com/cecimerelo/VizYourData#readme"
+}
