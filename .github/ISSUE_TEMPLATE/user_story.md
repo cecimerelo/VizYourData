@@ -6,27 +6,27 @@ labels: user-stories
 assignees: ''
 ---
 
-As a ... I want ... so I can ...
+Como ... quiero ...  de manera que pueda ...
 
 **CoS:**
 
-- Scenario: (action)...
-   - **Given**: I (am/have) ..., 
-   - **When**: I (do something) ...,
-   - **Then**: (what happens)...
+- Escenario: (acción)...
+   - **Dado**: I (am/have) ..., 
+   - **Cuando**: I (do something) ...,
+   - **Entonces**: (what happens)...
 ...
   
 
-**Functional Notes:**
+**Notas Funcionales:**
 
 - ...
 
-**Technical Notes:**
+**Notas Técnicas:**
 
 - ...
 
 
-**Tasks Breakdown:**
+**Tareas:**
 
 - Dev (1) 
 - Dev (2)
