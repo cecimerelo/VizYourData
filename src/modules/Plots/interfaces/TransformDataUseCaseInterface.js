@@ -1,9 +1,9 @@
-class PlotsConnectorInterface{
-    constructor(userId){
+class TransformDataUseCaseInterface{
+    constructor(fileName){
         // does nothing
     }
 
-    getPlotTypes(){
+    convertDataInFileToDataframe(){
         throw new Error('Not implemented method');
     }
 
@@ -16,4 +16,4 @@ class PlotsConnectorInterface{
     }
 }
 
-export default PlotsConnectorInterface;
+export default TransformDataUseCaseInterface;
