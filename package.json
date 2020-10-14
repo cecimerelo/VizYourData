@@ -26,10 +26,10 @@
     "test": "jest"
   },
   "jest": {
-    "setupFiles": [
-      "/home/ceci/Escritorio/VizYourData/setupTest.js",
-      "jest-canvas-mock"
-    ]
+    "setupFiles": ["./setupTest.js", "jest-canvas-mock"],
+    "globals": {
+      "__DEV__": true
+    }
   },
   "repository": {
     "type": "git",
