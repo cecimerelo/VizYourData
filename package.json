@@ -26,7 +26,7 @@
     "test": "jest"
   },
   "jest": {
-    "setupFiles": ["setupTest.js", "jest-canvas-mock"]
+    "setupFiles": [" /home/runner/work/VizYourData/setupTest.js", "jest-canvas-mock"]
   },
   "repository": {
     "type": "git",
