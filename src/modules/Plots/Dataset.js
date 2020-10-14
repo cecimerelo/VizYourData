@@ -1,16 +1,15 @@
-import TransformDataUseCaseInterface from "../interfaces/TransformDataUseCaseInterface";
+import DatasetInterface from "./DatasetInterface";
 import {DataFrame} from "dataframe-js";
+
 
 const FILE_EXTENSION = 0;
 const JSON = '.json';
 const CSV = '.csv';
 
-
-class TransformDataUseCase extends TransformDataUseCaseInterface {
+class Dataset extends DatasetInterface{
     constructor(fileName) {
         super();
         this._fileName = fileName;
-        this._dataframe = null;
     }
 
     async convertDataInFileToDataframe() {
@@ -30,4 +29,4 @@ class TransformDataUseCase extends TransformDataUseCaseInterface {
     }
 }
 
-export default TransformDataUseCase;
+export default  Dataset;

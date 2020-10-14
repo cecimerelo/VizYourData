@@ -1,9 +1,8 @@
-class TransformDataUseCaseInterface{
-    constructor(fileName){
-        // does nothing
-    }
+import Dataset from "../Dataset";
 
-    convertDataInFileToDataframe(){
+class BuildScatterPlotInterface extends Dataset{
+
+    run(){
         throw new Error('Not implemented method');
     }
 
@@ -16,4 +15,4 @@ class TransformDataUseCaseInterface{
     }
 }
 
-export default TransformDataUseCaseInterface;
+export default BuildScatterPlotInterface;
