@@ -26,10 +26,7 @@
     "test": "jest"
   },
   "jest": {
-    "setupFiles": [
-      "setupTest.js",
-      "jest-canvas-mock"
-    ]
+    "setupFiles": ["setupTest.js", "jest-canvas-mock"]
   },
   "repository": {
     "type": "git",
