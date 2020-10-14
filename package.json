@@ -27,7 +27,7 @@
   },
   "jest": {
     "setupFiles": [
-      "VizYourData/setupTest.js",
+      "setupTest.js",
       "jest-canvas-mock"
     ]
   },
