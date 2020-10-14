@@ -1,0 +1,19 @@
+name: Jest tests
+
+on: push
+
+jobs:
+  unit_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: update
+        run: sudo apt-get update
+      - name: Install automake, libtool and npm
+        run: sudo apt-get install automake libtool npm nodejs nodejs-dev node-gyp libssl1.0-dev
+      - name: Install packages
+        run: npm install
+      - name: Run tests
+        run: node node_modules/jest/bin/jest.js
