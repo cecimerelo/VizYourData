@@ -14,6 +14,8 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [2. Roadmap del proyecto](docs/roadmap.md)
 
+[3. Justificación herramientas de construcción](docs/herramientas_construccion.md)
+
 # Enlaces adicionales
 
 * [Configuración de git](docs/config_git.md)
