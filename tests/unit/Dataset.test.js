@@ -1,8 +1,8 @@
 import {describe, test} from "@jest/globals";
 import Dataset from "../../src/modules/Plots/Dataset";
 
-const CSV_FILE_PATH = './tests/files/2_TwoNum.csv';
-const JSON_FILE_PATH = './tests/files/colors.json';
+const CSV_FILE_PATH = '../../tests/files/2_TwoNum.csv';
+const JSON_FILE_PATH = '../../tests/files/colors.json';
 
 describe ('Dataset', () => {
 
