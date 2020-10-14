@@ -27,7 +27,7 @@
   },
   "jest": {
     "setupFiles": [
-      "/home/ceci/Escritorio/VizYourData/setupTest.js",
+      "VizYourData/setupTest.js",
       "jest-canvas-mock"
     ]
   },
