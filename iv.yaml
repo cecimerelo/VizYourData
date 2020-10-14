@@ -1,1 +1,1 @@
-entidad: src/modules/Plots/connectors/PlotsConnector.js
+entidad: src/modules/Plots/useCases/TransformDataUseCaseInterface.js

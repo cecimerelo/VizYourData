@@ -7,11 +7,29 @@
     "doc": "docs"
   },
   "dependencies": {
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@jest/globals": "^26.5.3",
+    "@types/node-fetch": "^2.5.7",
+    "babel-jest": "^26.5.2",
+    "dataframe-js": "^1.4.3",
+    "jest": "^26.5.3",
+    "jest-canvas-mock": "^2.3.0",
+    "plotly.js": "^1.56.0",
+    "plotly.js-dist": "^1.56.0",
+    "react-plotly.js": "^2.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "setupFiles": [
+      "/home/ceci/Escritorio/VizYourData/setupTest.js",
+      "jest-canvas-mock"
+    ]
   },
   "repository": {
     "type": "git",

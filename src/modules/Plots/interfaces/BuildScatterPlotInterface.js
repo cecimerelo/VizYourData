@@ -1,9 +1,8 @@
-class PlotsConnectorInterface{
-    constructor(userId){
-        // does nothing
-    }
+import Dataset from "../Dataset";
 
-    getPlotTypes(){
+class BuildScatterPlotInterface extends Dataset{
+
+    run(){
         throw new Error('Not implemented method');
     }
 
@@ -16,4 +15,4 @@ class PlotsConnectorInterface{
     }
 }
 
-export default PlotsConnectorInterface;
+export default BuildScatterPlotInterface;
