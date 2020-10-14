@@ -2,7 +2,7 @@ import {describe, test} from "@jest/globals";
 import BuildScatterPlot from "../../src/modules/Plots/useCases/BuildScatterPlot";
 
 
-const CSV_FILE_PATH = 'tests/files/2_TwoNum.csv';
+const CSV_FILE_PATH = './tests/files/2_TwoNum.csv';
 
 describe ('BuildScatterPlot', () => {
 
