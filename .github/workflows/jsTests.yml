@@ -16,4 +16,4 @@ jobs:
       - name: Install packages
         run: npm install
       - name: Run tests
-        run: node node_modules/jest/bin/jest.js
+        run: npm run tests
