@@ -16,8 +16,17 @@
     "@types/node-fetch": "^2.5.7",
     "babel-jest": "^26.5.2",
     "dataframe-js": "^1.4.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-install": "^1.1.0",
+    "gulp-jest": "^4.0.3",
+    "gulp-shell": "^0.8.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
     "jest": "^26.5.3",
     "jest-canvas-mock": "^2.3.0",
+    "jest-cli": "^26.5.3",
     "plotly.js": "^1.56.0",
     "plotly.js-dist": "^1.56.0",
     "react-plotly.js": "^2.5.0"
@@ -26,7 +35,10 @@
     "test": "jest"
   },
   "jest": {
-    "setupFiles": ["./setupTest.js", "jest-canvas-mock"],
+    "setupFiles": [
+      "./setupTest.js",
+      "jest-canvas-mock"
+    ],
     "globals": {
       "__DEV__": true
     }
