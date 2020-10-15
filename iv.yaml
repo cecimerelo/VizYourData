@@ -1,1 +1,4 @@
-entidad: src/modules/Plots/useCases/TransformDataUseCaseInterface.js
+lenguaje: javascript
+test: tests/unit/BuildScatterPlot.test.js
+entidad: src/modules/Plots/interfaces/BuildScatterPlotInterface.js
+taskfile: package.json
