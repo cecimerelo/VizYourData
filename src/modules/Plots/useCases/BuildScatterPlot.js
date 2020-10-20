@@ -1,5 +1,4 @@
 import BuildScatterPlotInterface from "../interfaces/BuildScatterPlotInterface";
-import Plotly from 'plotly.js-dist'
 
 class BuildScatterPlot extends BuildScatterPlotInterface {
     constructor(fileName, xAxis, yAxis) {
