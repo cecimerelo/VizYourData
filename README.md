@@ -16,6 +16,9 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [3. Justificación herramientas de construcción](docs/herramientas_construccion.md)
 
+[4. Justificación de la imagen de Docker usada](docs/justificacion_imagen_docker.md)
+
+
 # Tests
 
 Los tests se pueden encontrar en [esta](tests/unit) carpeta. Puede parecer que los tests se hicieron separados de la
