@@ -21,7 +21,7 @@ jobs:
           with:
             context: .
             file: ./Dockerfile
-            platform: |
+            build-args: |
               name=build
               node=build
               driver-opt=network
