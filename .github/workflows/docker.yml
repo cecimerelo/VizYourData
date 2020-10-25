@@ -21,5 +21,7 @@ jobs:
           with:
             context: .
             file: ./Dockerfile
+            build-args: |
+              arg1=cecimerelo/vizyourdata:latest
             push: true
             tags: cecimerelo/vizyourdata:latest
