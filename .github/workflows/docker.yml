@@ -9,13 +9,19 @@ jobs:
         - name: Check out the repo
           uses: actions/checkout@v2
 
-        - name: Construir imagen de Docker
-          run: docker build . --file Dockerfile -t cecimerelo/vizyourdata:$(date +%s)
-
-        - name: Push VizYourData a Docker Hub
-          uses: docker/build-push-action@v1
+        - name: Loguear en DockerHub
+          uses: docker/login-action@v1
           with:
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_PASSWORD }}
-            repository: cecimerelo/vizyourdata
-            dockerfile: Dockerfile
+
+        - name: Build and push
+          id: docker_build
+          uses: docker/build-push-action@v2
+          with:
+            push: true
+            tags: cecimerelo/vizyourdata:latest
+            build-args: |
+              arg1= .
+            - name: Image digestº
+              run: echo ${{ steps.docker_build.outputs.digest }}
