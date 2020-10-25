@@ -20,8 +20,8 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
+            file: ./Dockerfile
             tags: cecimerelo/vizyourdata:latest
-            build-args: |
-              arg1= .
-            - name: Image digestº
-              run: echo ${{ steps.docker_build.outputs.digest }}
+            context: .
+        - name: Image digestº
+          run: echo ${{ steps.docker_build.outputs.digest }}
