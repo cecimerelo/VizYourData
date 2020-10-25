@@ -1,17 +1,21 @@
-# specify the node base image with your desired version node:<version>
-FROM node:10
+FROM node:10-buster-slim
 
-# set a directory for the app
-WORKDIR /home/ceci/VizYourData/src
+LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
+LABEL maintainer = "Cecilia Merelo"
 
-# copy all the files to the container
-COPY . .
+ENV WORKDIR=/home/ceci/VizYourData
 
-# install dependencies
-RUN npm install
+WORKDIR ${WORKDIR}
 
-# replace this with your application's default port
-EXPOSE 80
+COPY package*.json ./
+
+RUN npm install && npm install -g grunt-cli
+
+COPY src ./src
+COPY Gruntfile.js ./
+COPY test ./test
+COPY setupTest.js ./
+COPY babel.config.js ./
 
 # command for running the application
-# CMD ["python", "./app.py"]
+CMD ["grunt"]
