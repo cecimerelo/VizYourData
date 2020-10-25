@@ -27,15 +27,15 @@ las que se hicieron en una rama diferente. En el [Pull Request](https://github.c
 asociada a la [Historia de Usuario](https://github.com/cecimerelo/VizYourData/issues/13) se puede ver cómo se 
 desarrollaron a la vez. 
 
-# Rúbricas Hito 3
+# Rúbricas Entrega 3
 
 1. [Elección correcta y justificada del contenedor base.](docs/justificacion_imagen_docker.md)
-2. Dockerfile correcto, siguiendo buenas prácticas, y adaptado de forma correcta a las clases o 
-módulos que se están testeando. Se puede encontrar este fichero en el directorio raíz del proyecto.
+2. [Dockerfile](https://github.com/cecimerelo/VizYourData/blob/main/Dockerfile) correcto, siguiendo buenas prácticas, 
+y adaptado de forma correcta a las clases o módulos que se están testeando.
 3. Contenedor subido correctamente a [Docker Hub](https://hub.docker.com/repository/docker/cecimerelo/vizyourdata/).
 4. Uso de registros alternativos y públicos de contenedores (como GitHub Container Registry).
-5. Documentación de [buenas prácticas](docs/justificacion_imagen_docker.md) en la optimización del tamaño y/o la velocidad del contenedor resultante, 
-incluyendo comparación de diferentes imágenes base por tamaño o velocidad de ejecución de los tests.
+5. Documentación de [buenas prácticas](docs/justificacion_imagen_docker.md) en la optimización del tamaño y/o la 
+velocidad del contenedor resultante, incluyendo comparación de diferentes imágenes base por tamaño o velocidad de ejecución de los tests.
 
 # Enlaces adicionales
 
