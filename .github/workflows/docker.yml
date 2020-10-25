@@ -21,8 +21,9 @@ jobs:
           with:
             context: .
             file: ./Dockerfile
-            name: build
-            node: build
-            driver-opt: network=host
+            platform: |
+              name=build
+              node=build
+              driver-opt=network
             push: true
             tags: cecimerelo/vizyourdata:latest
