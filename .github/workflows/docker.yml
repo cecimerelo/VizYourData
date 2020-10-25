@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Construir imagen de Docker
-          run: docker build . --file Dockerfile -t cecimerelo/vizyourdata:$(date +%s)
+          run: docker build . --file Dockerfile -t cecimerelo/vizyourdata .
 
         - name: Push VizYourData a Docker Hub
           uses: docker/build-push-action@v1
