@@ -16,13 +16,26 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [3. Justificación herramientas de construcción](docs/herramientas_construccion.md)
 
+[4. Justificación de la imagen de Docker usada](docs/justificacion_imagen_docker.md)
+
+
 # Tests
 
-Los tests se pueden encontrar en [esta](tests/unit) carpeta. Puede parecer que los tests se hicieron separados de la
+Los tests se pueden encontrar en [esta](test/unit) carpeta. Puede parecer que los tests se hicieron separados de la
 historia de usuario, pero son las [Github actions](https://github.com/cecimerelo/VizYourData/issues/12) que lo ejecutan
 las que se hicieron en una rama diferente. En el [Pull Request](https://github.com/cecimerelo/VizYourData/pull/14/files)
 asociada a la [Historia de Usuario](https://github.com/cecimerelo/VizYourData/issues/13) se puede ver cómo se 
 desarrollaron a la vez. 
+
+# Rúbricas Hito 3
+
+1. [Elección correcta y justificada del contenedor base.](docs/justificacion_imagen_docker.md)
+2. Dockerfile correcto, siguiendo buenas prácticas, y adaptado de forma correcta a las clases o 
+módulos que se están testeando. Se puede encontrar este fichero en el directorio raíz del proyecto.
+3. Contenedor subido correctamente a [Docker Hub](https://hub.docker.com/repository/docker/cecimerelo/vizyourdata/).
+4. Uso de registros alternativos y públicos de contenedores (como GitHub Container Registry).
+5. Documentación de [buenas prácticas](docs/justificacion_imagen_docker.md) en la optimización del tamaño y/o la velocidad del contenedor resultante, 
+incluyendo comparación de diferentes imágenes base por tamaño o velocidad de ejecución de los tests.
 
 # Enlaces adicionales
 

@@ -32,7 +32,8 @@
     "jest-coverage": "jest --coverage"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "verbose": true
   },
   "setupFiles": [
     "./setupTest.js",
