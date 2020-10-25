@@ -6,8 +6,7 @@ Siguiendo el documento de [buenas prácticas de Docker](https://www.docker.com/b
     LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
     ```
 2. No usar la tag por defecto, ya que puede llegar un punto en el que la última imagen que se uba a Docker pueda romper
-la aplicación. La justificación de la imagen utilizada se puede encontrar [aquí](justificacion_imagen_docker). Además,
-buscar siempre la imagen más pequeña que podamos.
+la aplicación. Además, buscar siempre la imagen más pequeña que podamos.
 
 3. Usar variables de entorno, por ejemplo en ```WORKDIR```, por si tenemos futuros cambios en las carpetas.
 
