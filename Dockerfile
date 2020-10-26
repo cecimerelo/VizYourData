@@ -6,11 +6,13 @@ LABEL maintainer = "Cecilia Merelo"
 ARG DIR="/test"
 
 USER root
-RUN mkdir $DIR && chown node $DIR
-COPY --chown=node package*.json /home/vizyourdata
+
+RUN mkdir $DIR /node_modules && chown -R node $DIR /node_modules
+RUN npm install -g grunt-cli
+COPY --chown=node package.json ./
 
 USER node
-RUN npm install && npm install -g grunt-cli
+RUN npm install
 ENV PATH=/node_modules/.bin:$PATH
 COPY setupTest.js ./
 COPY babel.config.js ./
@@ -18,4 +20,4 @@ COPY Gruntfile.js ./
 
 WORKDIR $DIR
 VOLUME $DIR
-CMD ["grunt", "tests"]
+CMD ["grunt", "test"]

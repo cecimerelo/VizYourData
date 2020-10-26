@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         run: {
-            tests: {
+            test: {
                 cmd: 'npm',
                 args: [
                     'run',
@@ -13,5 +13,5 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-run');
-    grunt.registerTask('tests', ['run:tests']);
+    grunt.registerTask('test', ['run:test']);
 };
