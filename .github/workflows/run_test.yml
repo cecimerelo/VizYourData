@@ -8,8 +8,8 @@ env:
 jobs:
 
   push-container-to-github-package-registry:
-    runs-on: ubuntu-latest
-    steps:
+    - runs-on: ubuntu-latest
+    - steps:
       - name: Log in Github Package Registry
         uses: docker/login-action@v1
         with:
