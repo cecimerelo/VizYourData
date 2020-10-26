@@ -43,6 +43,7 @@
     "type": "git",
     "url": "git+https://github.com/cecimerelo/VizYourData.git"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "author": "Cecilia Merelo",
   "license": "ISC",
   "bugs": {
