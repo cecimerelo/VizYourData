@@ -33,7 +33,7 @@ desarrollaron a la vez.
 2. [Dockerfile](https://github.com/cecimerelo/VizYourData/blob/main/Dockerfile) correcto, siguiendo buenas prácticas, 
 y adaptado de forma correcta a las clases o módulos que se están testeando.
 3. Contenedor subido correctamente a [Docker Hub](https://hub.docker.com/repository/docker/cecimerelo/vizyourdata/).
-4. Uso de registros alternativos y públicos de contenedores (como GitHub Container Registry).
+4. Uso de registros alternativos y públicos de contenedores: [GitHub Container Registry](https://github.com/cecimerelo?tab=packages)
 5. Documentación de [buenas prácticas](docs/justificacion_imagen_docker.md) en la optimización del tamaño y/o la 
 velocidad del contenedor resultante, incluyendo comparación de diferentes imágenes base por tamaño o velocidad de ejecución de los tests.
 
