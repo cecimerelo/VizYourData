@@ -10,6 +10,7 @@ jobs:
   push-container-to-github-package-registry:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Log in Github Package Registry
         uses: docker/login-action@v1
         with:
