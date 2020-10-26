@@ -3,19 +3,19 @@ FROM node:10-alpine3.10
 LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
 LABEL maintainer = "Cecilia Merelo"
 
-ENV WORKDIR=/home/ceci/VizYourData
+ARG DIR="/test"
+USER root
 
-WORKDIR ${WORKDIR}
-
-COPY package*.json ./
-
+RUN mkdir $DIR && chown node $DIR
+COPY --chown=node package*.json /home/vizyourdata/
 RUN npm install && npm install -g grunt-cli
+ENV PATH=/node_modules/.bin:$PATH
 
-COPY src ./src
-COPY Gruntfile.js ./
-COPY test ./test
+USER node
 COPY setupTest.js ./
 COPY babel.config.js ./
+COPY Gruntfile.js ./
 
-# command for running the application
+WORKDIR $DIR
+VOLUME $DIR
 CMD ["grunt"]
