@@ -1,8 +1,10 @@
 import {describe, test} from "@jest/globals";
 import Dataset from "../../src/modules/Plots/Dataset";
 
-const CSV_FILE_PATH = 'VizYourData/test/files/2_TwoNum.csv';
-const JSON_FILE_PATH = 'VizYourData/test/files/colors.json';
+const homedir = require('os').homedir();
+
+const CSV_FILE_PATH = `${homedir}/VizYourData/test/files/2_TwoNum.csv`;
+const JSON_FILE_PATH = `${homedir}/VizYourData/test/files/colors.json`;
 
 describe ('Dataset', () => {
 
