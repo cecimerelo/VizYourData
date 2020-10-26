@@ -2,7 +2,7 @@ import {describe, test} from "@jest/globals";
 import Dataset from "../../src/modules/Plots/Dataset";
 
 const CSV_FILE_PATH = 'VizYourData/test/files/2_TwoNum.csv';
-const JSON_FILE_PATH = 'VizYourData/test/files/colors.json';
+const JSON_FILE_PATH = 'test/files/colors.json';
 
 describe ('Dataset', () => {
 
