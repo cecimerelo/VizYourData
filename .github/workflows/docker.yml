@@ -14,7 +14,3 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: cecimerelo/vizyourdata
           tag_with_ref: true
-
-      - name: Run tests
-        uses: actions/checkout@v2
-        run: docker run -t -v `pwd`:/test cecimerelo/vizyourdata
