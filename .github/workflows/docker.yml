@@ -2,7 +2,7 @@ name: Docker
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 env:
   TEST_IMAGE_PATH: ghcr.io/cecimerelo/vizyourdata:latest
