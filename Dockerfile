@@ -17,5 +17,5 @@ RUN npm install
 ENV PATH=/node_modules/.bin:$PATH
 
 WORKDIR $HOME
-VOLUME $HOME
+VOLUME . $HOME
 CMD ["grunt", "test"]
