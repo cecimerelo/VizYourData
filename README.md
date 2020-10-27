@@ -21,7 +21,7 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 # Tests
 
-Los tests se pueden encontrar en [esta](test/unit) carpeta. Puede parecer que los tests se hicieron separados de la
+Los tests se pueden encontrar en [esta](tests/unit) carpeta. Puede parecer que los tests se hicieron separados de la
 historia de usuario, pero son las [Github actions](https://github.com/cecimerelo/VizYourData/issues/12) que lo ejecutan
 las que se hicieron en una rama diferente. En el [Pull Request](https://github.com/cecimerelo/VizYourData/pull/14/files)
 asociada a la [Historia de Usuario](https://github.com/cecimerelo/VizYourData/issues/13) se puede ver cómo se 

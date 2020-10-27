@@ -1,4 +1,4 @@
 lenguaje: javascript
-test: test/unit/BuildScatterPlot.test.js
+test: tests/unit/BuildScatterPlot.test.js
 entidad: src/modules/Plots/interfaces/BuildScatterPlotInterface.js
 taskfile: package.json
