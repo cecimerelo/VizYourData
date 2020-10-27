@@ -18,4 +18,6 @@ RUN npm install
 ENV PATH=/home/node/node_modules/.bin:$PATH
 
 WORKDIR $HOME
+RUN pwd
+RUN ls
 CMD ["grunt", "test"]
