@@ -1,8 +1,7 @@
 import {describe, test} from "@jest/globals";
 import BuildScatterPlot from "../../src/modules/Plots/useCases/BuildScatterPlot";
 
-const homedir = require('os').homedir();
-const CSV_FILE_PATH = `${homedir}/test/files/2_TwoNum.csv`;
+const CSV_FILE_PATH = 'test/files/2_TwoNum.csv';
 
 describe ('BuildScatterPlot', () => {
 
