@@ -5,14 +5,15 @@ LABEL maintainer = "Cecilia Merelo"
 LABEL maintainer = "Cecilia Merelo Molina"
 
 ENV DIR="/home/node/test"
+ENV HOME="/home/node/"
 
 USER root
-RUN mkdir $DIR /home/node/node_modules && chown -R node $DIR /home/node/node_modules
+RUN mkdir $DIR && chown -R node $DIR $HOME
 RUN npm install -g grunt-cli
-COPY --chown=node package.json ./
+COPY --chown=node package.json $HOME
 
 USER node
-WORKDIR /home/node
+WORKDIR $HOME
 RUN npm install
 ENV PATH=/node_modules/.bin:$PATH
 
