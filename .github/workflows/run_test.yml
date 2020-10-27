@@ -32,6 +32,10 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GR_TOKEN }}
       - uses: actions/checkout@v2
+      - name: See directories
+        run: ls
+      - name: See pwd
+        run: pwd
       - name: Run tests
         run: docker run -t -v `pwd`:/test $TEST_IMAGE_PATH
 
