@@ -4,7 +4,7 @@ LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
 LABEL maintainer = "Cecilia Merelo"
 LABEL maintainer = "Cecilia Merelo Molina"
 
-ARG DIR="/test"
+ENV DIR="/test"
 
 USER root
 RUN mkdir $DIR /node_modules && chown -R node $DIR /node_modules
