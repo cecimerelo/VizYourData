@@ -4,10 +4,10 @@ LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
 LABEL maintainer = "Cecilia Merelo"
 LABEL maintainer = "Cecilia Merelo Molina"
 
-ENV DIR="/test"
+ENV DIR="home/node/test"
 
 USER root
-RUN mkdir $DIR /node_modules && chown -R node $DIR /node_modules
+RUN mkdir $DIR && chown -R node $DIR /home/node/node_modules
 RUN npm install -g grunt-cli
 COPY --chown=node package.json ./
 
