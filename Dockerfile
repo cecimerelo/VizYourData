@@ -14,9 +14,6 @@ COPY --chown=node package.json ./
 USER node
 RUN npm install
 ENV PATH=/node_modules/.bin:$PATH
-COPY setupTest.js ./
-COPY babel.config.js ./
-COPY Gruntfile.js ./
 
 WORKDIR $DIR
 VOLUME $DIR
