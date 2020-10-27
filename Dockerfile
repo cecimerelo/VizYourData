@@ -17,6 +17,4 @@ WORKDIR $HOME
 RUN npm install
 ENV PATH=/home/node/node_modules/.bin:$PATH
 
-WORKDIR $DIR
-VOLUME $DIR
 CMD ["grunt", "test"]
