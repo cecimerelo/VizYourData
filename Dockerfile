@@ -4,17 +4,16 @@ LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
 LABEL maintainer = "Cecilia Merelo Molina"
 
 ARG DIR="/home/node/test/"
-ARG HOME="/home/node/"
 
 USER root
-RUN mkdir $DIR && chown -R node $DIR $HOME
+RUN mkdir $DIR && chown -R node $DIR
 RUN npm install -g grunt-cli
-COPY --chown=node package.json $HOME
+COPY --chown=node package.json $DIR
 
 USER node
-WORKDIR $HOME
+WORKDIR $DIR
 RUN npm install
 ENV PATH=/node_modules/.bin:$PATH
 
-WORKDIR $HOME
+WORKDIR $DIR
 CMD ["grunt", "test"]
