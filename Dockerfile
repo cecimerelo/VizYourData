@@ -4,7 +4,7 @@ LABEL com.example.version="0.0.1" com.example.release-date="2020-10-25"
 LABEL maintainer = "Cecilia Merelo Molina"
 
 ENV HOME="/home/node/"
-ENV DIR="/home/node/test/"
+ENV DIR="/test"
 
 USER root
 RUN mkdir $DIR && chown -R node $DIR $HOME
@@ -15,7 +15,6 @@ USER node
 WORKDIR $HOME
 RUN npm install
 ENV PATH=/node_modules/.bin:$PATH
-VOLUME $HOME
-WORKDIR $HOME
 
+WORKDIR $DIR
 CMD ["grunt", "test"]
