@@ -10,12 +10,12 @@ ENV HOME="/home/node/"
 USER root
 RUN mkdir $DIR && chown -R node $DIR $HOME
 RUN npm install -g grunt-cli
-COPY --chown=node package.json $HOME
+COPY --chown=node package.json Gruntfile.js $HOME
 
 USER node
 WORKDIR $HOME
 RUN npm install
-ENV PATH=/node_modules/.bin:$PATH
+ENV PATH=/home/node/node_modules/.bin:$PATH
 
 WORKDIR $DIR
 VOLUME $DIR
