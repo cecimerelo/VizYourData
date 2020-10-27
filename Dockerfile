@@ -5,12 +5,13 @@ LABEL maintainer = "Cecilia Merelo Molina"
 ENV DIR="/test"
 
 USER root
+RUN mkdir $DIR /node_modules && chown -R node $DIR /node_modules
 RUN npm install -g grunt-cli
 COPY --chown=node package.json ./
-RUN npm install
 
 USER node
+RUN npm install
+ENV PATH=/node_modules/.bin:$PATH
 WORKDIR $DIR
 VOLUME $DIR
-ENV PATH=/home/node_modules/.bin:$PATH
 CMD ["grunt", "test"]
