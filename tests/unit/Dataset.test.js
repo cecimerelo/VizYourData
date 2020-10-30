@@ -1,10 +1,9 @@
 import {describe, test} from "@jest/globals";
 import Dataset from "../../src/modules/Plots/Dataset";
-import {homedir} from "os";
+import { resolve } from "path";
 
-const homeDir = homedir();
-const CSV_FILE_PATH = `${homeDir}/work/VizYourData/VizYourData/tests/files/2_TwoNum.csv`;
-const JSON_FILE_PATH = `${homeDir}/work/VizYourData/VizYourData/tests/files/colors.json`;
+const CSV_FILE_PATH = resolve("tests/files/2_TwoNum.csv");
+const JSON_FILE_PATH = resolve("tests/files/colors.json");
 
 describe ('Dataset', () => {
 

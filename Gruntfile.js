@@ -1,31 +1,8 @@
-module.exports = function(grunt) {
-    const sass = require('node-sass');
-
+module.exports = function (grunt) {
     grunt.initConfig({
-        sass: {
-            options: {
-                implementation:sass,
-                sourceMap: true,
-                relativeAssets: false,
-                outputStyle: 'compressed',
-                sassDir: 'css',
-                cssDir: 'css',
-                includePaths: [
-                    './node_modules/'
-                ]
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    src: '*.scss',
-                    dest: 'wcss',
-                    ext: '.css'
-                }]
-            }
-        },
-
+        pkg: grunt.file.readJSON('package.json'),
         run: {
-            npm_test_jest: {
+            test: {
                 cmd: 'npm',
                 args: [
                     'run',
@@ -35,9 +12,6 @@ module.exports = function(grunt) {
             }
         }
     });
-
-    require('load-grunt-tasks')(grunt);
     grunt.loadNpmTasks('grunt-run');
-    grunt.registerTask('default', ['sass:dist', 'run:npm_test_jest']);
-
+    grunt.registerTask('test', ['run:test']);
 };
