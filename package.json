@@ -2,12 +2,12 @@
   "name": "vizyourdata",
   "version": "1.0.0",
   "description": "Proyecto para la asignatura de Infraestructura Virtual 20-21 de la UGR",
-  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.7"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -17,7 +17,9 @@
     "@material/icon-button": "^7.0.0",
     "@material/mwc-icon-button": "^0.19.1",
     "@material/top-app-bar": "^7.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
     "@types/node-fetch": "^2.5.7",
+    "@vue/test-utils": "^1.1.0",
     "babel-jest": "^26.5.2",
     "dataframe-js": "^1.4.3",
     "del": "^6.0.0",
@@ -34,10 +36,14 @@
     "node-sass": "^4.14.1",
     "plotly.js": "^1.56.0",
     "plotly.js-dist": "^1.56.0",
-    "react-plotly.js": "^2.5.0"
+    "vue-jest": "^3.0.4"
   },
   "scripts": {
-    "test-jest": "jest",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest",
     "jest-coverage": "jest --coverage"
   },
   "jest": {
