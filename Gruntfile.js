@@ -6,7 +6,7 @@ module.exports = function (grunt) {
                 cmd: 'npm',
                 args: [
                     'run',
-                    'test-jest',
+                    'test',
                     '--silent'
                 ]
             }
