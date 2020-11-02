@@ -25,7 +25,10 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 - [Integración continua](docs/integracion_continua.md) funcionando y correcta justificación de la misma.
 
-- Configuración de algún sistema de integración continua adicional (justificado de la misma forma).- uso correcto del gestor de tareas en todos los casos anteriores.
+- Configuración de algún sistema de [integración continua adicional](docs/integracion_continua_adicional.md) 
+(justificado de la misma forma).
+
+- Uso correcto del gestor de tareas en todos los casos anteriores.
 
 - Aprovechamiento del contenedor de Docker generado en el hito anterior en alguno de los sistemas de CI, especialmente si hay un cambio o adaptación del mismo.
 

@@ -25,4 +25,9 @@ la 8 y la 9 como podemos ver en la siguiente imagen:
 ![fail_build](img/fail_build.png)
 
 Entonces sabemos que dichas versiones no funcionan para nuestro proyecto así que las eliminamos. Probamos también a 
-añadir la última versión de node.
+añadir la última versión de node. Con esta última configuración se ha construido correctamente :
+
+![success_build](img/succes_build.png)
+
+
+Para ver los cambios que se han hecho en el código para configurar Travis ir [aquí](https://github.com/cecimerelo/VizYourData/pull/34/files#diff-6ac3f79fc25d95cd1e3d51da53a4b21b939437392578a35ae8cd6d5366ca5485).
