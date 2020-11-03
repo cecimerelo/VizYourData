@@ -43,9 +43,6 @@ son las que están instaladas en nuestro contenedor, así que para usarlo cambia
 language:
   - minimal
 
-services:
-  - docker
-
 before_install:
 - docker pull cecimerelo/vizyourdata
 
