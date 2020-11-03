@@ -54,4 +54,10 @@ script:
 ```
 
 Así usamos directamente nuestro contenedor. Como lenguaje usamos `minimal` porque sino por defecto se instalará
-ruby, y a la hora de la construcción tarda más.
+`ruby`, y a la hora de la construcción tarda más, como podemos ver en la siguiente imagen. El primer `build` que 
+aparece usa como lenguaje `minimal`, que es un alias para `shell`, y en el segundo no se ha especificado el lenguaje, así que 
+por defecto ha instalado `ruby`. Podemos ver que el primero es más rápido, aunque la diferencia no sea muy significativa.
+
+![travis_build](img/compara_builds.png)
+
+
