@@ -40,9 +40,6 @@ Se indican los lenguajes que usaremos y posteriormente se instalan las dependenc
 son las que están instaladas en nuestro contenedor, así que para usarlo cambiamos nuestra configuración a:
 
 ```
-language:
-  - minimal
-
 services:
   - docker
 
@@ -52,3 +49,5 @@ before_install:
 script: 
   - docker run -t -v  $TRAVIS_BUILD_DIR:/test cecimerelo/vizyourdata
 ```
+
+Así usamos directamente nuestro contenedor.
