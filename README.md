@@ -31,8 +31,8 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 - Uso correcto del gestor de tareas en todos los casos anteriores -> en el [fichero de configuración de Travis](https://github.com/cecimerelo/VizYourData/blob/main/.travis.yml) 
 se ejecutan los tests con la orden `grunt test`.
 
-- Aprovechamiento del contenedor de Docker generado en el hito anterior en alguno de los sistemas de CI,
-especialmente si hay un cambio o adaptación del mismo.
+- [Aprovechamiento del contenedor de Docker](docs/aprovechamiento_docker.md) generado en el hito anterior en alguno de 
+los sistemas de CI, especialmente si hay un cambio o adaptación del mismo.
 
 - Tests significativos y/o avance del proyecto en sí más allá del hito anterior.
 
