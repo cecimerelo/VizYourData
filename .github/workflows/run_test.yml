@@ -6,9 +6,25 @@ env:
   TEST_IMAGE_PATH: ghcr.io/cecimerelo/vizyourdata-test-env:latest
 
 jobs:
+  needsRebuild:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.needsRebuild.outputs.files }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dorny/paths-filter@v2
+        id: needsRebuild
+        with:
+          filters: |
+            files:
+              - 'Dockerfile'
+              - 'package.json'
+              - 'tests/**'
 
   push-container-to-github-package-registry:
+    needs: needs-rebuild
     runs-on: ubuntu-latest
+    if: ${{ needs.needsRebuild.outputs.changed == 'true' }}
     steps:
       - uses: actions/checkout@v2
       - name: Log in Github Package Registry
