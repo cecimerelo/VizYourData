@@ -37,7 +37,7 @@ export default {
     modules: ['@nuxtjs/axios'],
 
     serverMiddleware: [
-        { path: "~/src/api", handler: "~/src/api/rest.js" },
+        { path: "~/src/api", handler: "~/src/api" },
     ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

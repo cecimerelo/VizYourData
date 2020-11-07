@@ -40,7 +40,7 @@
                   v-model="dialogm1"
                   column
               >
-                <v-radio v-for="type in plotTypes" :key="`${type.key} Plot`" :label="`${type.name} Plot`"
+                <v-radio v-for="type in plotTypes" :key="`${type} Plot`" :label="`${type} Plot`"
                          :value="`${type.name} Plot`"></v-radio>
               </v-radio-group>
             </v-card-text>
@@ -74,11 +74,10 @@ export default {
   async asyncData(context) {
     let response = await context.$axios.get('http://localhost:3000/api/plotTypes');
     console.log(response);
+    let plotTypes = response.data.map(type => type.name);
     debugger;
-    //let plotTypes = response.data.data.map(type => type.attributes);
-
     return {
-      //plotTypes
+      plotTypes
     }
   }
 }
