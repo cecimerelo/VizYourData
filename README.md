@@ -34,5 +34,7 @@ se ejecutan los tests con la orden `grunt test`.
 - [Aprovechamiento del contenedor de Docker](docs/aprovechamiento_docker.md) generado en el milestone anterior en alguno de 
 los sistemas de CI, especialmente si hay un cambio o adaptación del mismo.
 
-- Tests significativos y/o avance del proyecto en sí más allá del milestone anterior. Esto se puede ver en [este](https://github.com/cecimerelo/VizYourData/pull/37) PR.
+- Tests significativos y/o avance del proyecto en sí más allá del milestone anterior. Esto se puede ver en 
+[este](https://github.com/cecimerelo/VizYourData/pull/37) PR. Además en el siguiente [link](https://github.com/cecimerelo/VizYourData/milestone/4?closed=1)
+se pueden ver los issues cerrados en este Milestone.
 
