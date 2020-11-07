@@ -73,9 +73,7 @@ export default {
 
   async asyncData(context) {
     let response = await context.$axios.get('http://localhost:3000/api/plotTypes');
-    console.log(response);
     let plotTypes = response.data.map(type => type.name);
-    debugger;
     return {
       plotTypes
     }
