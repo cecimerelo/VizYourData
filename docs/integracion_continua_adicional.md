@@ -5,25 +5,36 @@ También he configurado como sistema de integración continua una Github Action.
 1. Construir un contenedor Docker y subirlos al Github Package Registry
     
     ``` 
-    push-container-to-github-package-registry:
-       runs-on: ubuntu-latest
+    [...]
        steps:
+         # Copiamos el repositorio
          - uses: actions/checkout@v2
+         # Iniciamos sesión en GPR haciendo uso de la login-action@v1
          - name: Log in Github Package Registry
            uses: docker/login-action@v1
            with:
              registry: ghcr.io
              username: ${{ github.repository_owner }}
              password: ${{ secrets.GR_TOKEN }}
-         - name: Push Container
-           run: docker build -t $TEST_IMAGE_PATH . && docker push $TEST_IMAGE_PATH
+   ```
+    El último paso es donde hacemos la construcción y la subida del contenedor. 
+    ```
+     - name: Push Container
+       run: docker build -t $TEST_IMAGE_PATH . && docker push $TEST_IMAGE_PATH
     ```
 
-2. Siempre que el anterior trabajo no haya dado ningún error, lanza los tests:
+2. Siempre que el anterior trabajo no haya dado ningún error, lanza los tests, haciendo uso del contenedor que acabamos
+de subir. Tenemos que asegurarnos de que ya hay un contenedor, por eso este job sólo se ejecutará si el trabajo
+anterior no ha dado ningún problema. Para eso usamos :
     
     ```
-    needs: push-container-to-github-package-registry
-        if: always()
+   needs: push-container-to-github-package-registry
+       if: always()
+   ```
+   
+   Posteriormente usamos la acción para hacer log-in y descargarnos el paquete de nuestro GPR
+   
+    ```
         steps:
           - name: Log in Github Package Registry
             uses: docker/login-action@v1
@@ -31,9 +42,13 @@ También he configurado como sistema de integración continua una Github Action.
               registry: ghcr.io
               username: ${{ github.repository_owner }}
               password: ${{ secrets.GR_TOKEN }}
-          - uses: actions/checkout@v2
-          - name: Run tests
-            run: docker run -t -v `pwd`:/test $TEST_IMAGE_PATH
+   ```
+   Por último corremos los tests:
+    
+   ```
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: docker run -t -v `pwd`:/test $TEST_IMAGE_PATH
     ```
 
 Todo esto se hace por cada push a cualquier rama. Se ha configurado de esta forma, para que cada vez que se suba algo

@@ -35,3 +35,21 @@ Para ver los cambios que se han hecho en el código para configurar Travis ir
 
 ## Versión final
 
+Como he justificado anteriormente al final el lenguaje escogido y las versiones son:
+
+```
+language: node_js
+
+node_js:
+  - "10"
+  - "11"
+  - "12"
+```
+
+Para poder ejecutar las tareas del Task Runner primero debemos intalarlo a nivel global, para eso añadimos :
+```
+before_install:
+     - npm install -g grunt-cli
+```
+
+Y, por último ejecutamos las tareas del tas runner para instalar las dependencias y ejecutar nuestros tests.
