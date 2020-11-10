@@ -30,4 +30,26 @@ añadir la última versión de node. Con esta última configuración se ha const
 ![success_build](img/succes_build.png)
 
 
-Para ver los cambios que se han hecho en el código para configurar Travis ir [aquí](https://github.com/cecimerelo/VizYourData/pull/34/files#diff-6ac3f79fc25d95cd1e3d51da53a4b21b939437392578a35ae8cd6d5366ca5485).
+Para ver los cambios que se han hecho en el código para configurar Travis ir 
+[aquí](https://github.com/cecimerelo/VizYourData/pull/34/files#diff-6ac3f79fc25d95cd1e3d51da53a4b21b939437392578a35ae8cd6d5366ca5485).
+
+## Versión final
+
+Como he justificado anteriormente al final el lenguaje escogido y las versiones son:
+
+```
+language: node_js
+
+node_js:
+  - "10"
+  - "11"
+  - "12"
+```
+
+Para poder ejecutar las tareas del Task Runner primero debemos intalarlo a nivel global, para eso añadimos :
+```
+before_install:
+     - npm install -g grunt-cli
+```
+
+Y, por último ejecutamos las tareas del tas runner para instalar las dependencias y ejecutar nuestros tests.
