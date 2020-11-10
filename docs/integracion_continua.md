@@ -52,4 +52,4 @@ before_install:
      - npm install -g grunt-cli
 ```
 
-Y, por último ejecutamos las tareas del tas runner para instalar las dependencias y ejecutar nuestros tests.
+Y, por último ejecutamos las tareas del tas runner para instalar las dependencias y ejecutar nuestros tests. La versión final podemos encontrarla [aquí](https://github.com/cecimerelo/VizYourData/blob/main/.travis.yml).
