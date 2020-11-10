@@ -1,6 +1,11 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        env: {
+            travisTest: {
+                src: ".env"
+            }
+        },
         run: {
             test: {
                 cmd: 'npm',
@@ -16,7 +21,7 @@ module.exports = function (grunt) {
                     'run',
                     '-t',
                     '-v',
-                    '$TRAVIS_BUILD_DIR:/test',
+                    '<%= TRAVIS_BUILD_DIR %>:/test',
                     'cecimerelo/vizyourdata'
                 ]
             }
@@ -24,5 +29,8 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-run');
     grunt.registerTask('test', ['run:test']);
-    grunt.registerTask('travisTest', ['run:travisTest']);
-};
+    grunt.registerTask('travisTest', ['run:travisTest'], () =>{
+        grunt.config('TRAVIS_BUILD_DIR', process.env.TRAVIS_BUILD_DIR);
+        grunt.log.ok();
+    });
+}
