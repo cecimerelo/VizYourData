@@ -1,11 +1,6 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        env: {
-            dev: {
-                TRAVIS_BUILD_DIR: $TRAVIS_BUILD_DIR
-            }
-        },
         run: {
             test: {
                 cmd: 'npm',
@@ -18,8 +13,7 @@ module.exports = function (grunt) {
             travisTest: {
                 cmd: 'docker',
                 args: [
-                    'run',
-                    '-t',
+                    'run -t',
                     '-v',
                     '<%=TRAVIS_BUILD_DIR%>:/test',
                     'cecimerelo/vizyourdata'
@@ -34,7 +28,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('loadBuildDir', 'Load constants', function() {
         grunt.config('TRAVIS_BUILD_DIR', process.env.TRAVIS_BUILD_DIR);
+        grunt.log.ok();
     });
 
-    grunt.registerTask('travisTest', ['env:dev', 'loadBuildDir', 'run:travisTest']);
+    grunt.registerTask('travisTest', ['loadBuildDir', 'run:travisTest']);
 }
