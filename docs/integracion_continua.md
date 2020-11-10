@@ -30,4 +30,8 @@ añadir la última versión de node. Con esta última configuración se ha const
 ![success_build](img/succes_build.png)
 
 
-Para ver los cambios que se han hecho en el código para configurar Travis ir [aquí](https://github.com/cecimerelo/VizYourData/pull/34/files#diff-6ac3f79fc25d95cd1e3d51da53a4b21b939437392578a35ae8cd6d5366ca5485).
+Para ver los cambios que se han hecho en el código para configurar Travis ir 
+[aquí](https://github.com/cecimerelo/VizYourData/pull/34/files#diff-6ac3f79fc25d95cd1e3d51da53a4b21b939437392578a35ae8cd6d5366ca5485).
+
+## Versión final
+

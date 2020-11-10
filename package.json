@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "grunt-contrib-imagemin": "^4.0.0",
     "nuxt": "^2.14.7"
   },
   "devDependencies": {
