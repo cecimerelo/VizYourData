@@ -1,9 +1,9 @@
 language: node_js
 node_js:
+  - "10"
+  - "11"
   - "12"
-
-before-install:
+before_install:
   - npm install -g grunt-cli
-
-script:
-  - grunt travisTest
+  - npm install
+script: grunt test
