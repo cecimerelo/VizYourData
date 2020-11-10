@@ -13,9 +13,9 @@ module.exports = function (grunt) {
             travisTest: {
                 cmd: 'docker',
                 args: [
-                    'run -t',
-                    '-v',
-                    '<%=TRAVIS_BUILD_DIR%>:/test',
+                    'run',
+                    '-t',
+                    '-v <%=TRAVIS_BUILD_DIR%>:/test',
                     'cecimerelo/vizyourdata'
                 ]
             }
