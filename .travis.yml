@@ -3,6 +3,7 @@ node_js:
   - "12"
 
 before install:
+  - docker pull cecimerelo/vizyourdata
   - npm install -g grunt-cli
 
 script:
