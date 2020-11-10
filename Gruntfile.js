@@ -16,6 +16,8 @@ module.exports = function (grunt) {
                     'run',
                     '-t',
                     '-v',
+                    '$TRAVIS_BUILD_DIR:/test',
+                    'cecimerelo/vizyourdata'
                 ]
             }
         }

@@ -6,4 +6,4 @@ before install:
   - npm install -g grunt-cli
 
 script:
-  - grunt travisTest $TRAVIS_BUILD_DIR:/test cecimerelo/vizyourdata
+  - grunt travisTest
