@@ -1,8 +1,8 @@
 language:
   - minimal
 
-before_install:
-- docker pull cecimerelo/vizyourdata
+before install:
+  - npm install -g grunt-cli
 
 script:
-  - docker run -t -v  $TRAVIS_BUILD_DIR:/test cecimerelo/vizyourdata
+  - grunt travisTest  $TRAVIS_BUILD_DIR:/test cecimerelo/vizyourdata
