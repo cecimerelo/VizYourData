@@ -61,6 +61,21 @@ export default {
                     exclude: /(node_modules)/
                 })
             }
+        },
+
+        babel: {
+            // envName: server, client, modern
+            presets() {
+                return [
+                    [
+                        '@nuxt/babel-preset-app',
+                        {
+                            useBuiltIns: "entry"
+                        }
+                    ]
+                ]
+            },
         }
+
     }
 }
