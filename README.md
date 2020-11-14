@@ -22,4 +22,6 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [6. Rúbricas de la entrega 4](docs/entrega_4.md)
 
+# Semana 8
+- [Darme de alta Vercel](docs/vercel.md)
 
