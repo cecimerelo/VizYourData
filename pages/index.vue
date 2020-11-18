@@ -70,12 +70,15 @@
 
 <script>
 export default {
-
-  async asyncData(context) {
-    let response = await context.$axios.get('http://localhost:3000/api/plotTypes');
-    let plotTypes = response.data.map(type => type.name);
-    return {
-      plotTypes
+  methods: {
+    async asyncData(context) {
+      const path = this.$nuxt.$route.resolve({path: '/plotTypes'});
+      const fullUrl = window.location.origin + "/" + path;
+      let response = await context.$axios.get(fullUrl);
+      let plotTypes = response.data.map(type => type.name);
+      return {
+        plotTypes
+      }
     }
   }
 }
