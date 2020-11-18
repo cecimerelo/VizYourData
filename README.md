@@ -20,19 +20,8 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [5. Rúbricas de la entrega 3](docs/entrega_3.md)
 
+[6. Rúbricas de la entrega 4](docs/entrega_4.md)
 
-# Rúbricas Entrega 4
-
-- [Integración continua](docs/integracion_continua.md) funcionando y correcta justificación de la misma.
-
-- Configuración de algún sistema de [integración continua adicional](docs/integracion_continua_adicional.md) 
-(justificado de la misma forma).
-
-- Uso correcto del gestor de tareas en todos los casos anteriores -> en el [fichero de configuración de Travis](https://github.com/cecimerelo/VizYourData/blob/main/.travis.yml) 
-se ejecutan los tests con la orden `grunt test`.
-
-- [Aprovechamiento del contenedor de Docker](docs/aprovechamiento_docker.md) generado en el hito anterior en alguno de 
-los sistemas de CI, especialmente si hay un cambio o adaptación del mismo.
-
-- Tests significativos y/o avance del proyecto en sí más allá del hito anterior.
+# Semana 8
+- [Darme de alta Vercel](docs/vercel.md)
 
