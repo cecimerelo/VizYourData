@@ -1,0 +1,12 @@
+[
+  {
+    "type": "Scatter Plot",
+    "description": "Scatterplots use a collection of points placed using Cartesian Coordinates to display values from two variables. By displaying a variable in each axis, you can detect if a relationship or correlation between the two variables exists.",
+    "source": "https://datavizcatalogue.com/methods/scatterplot.html"
+  },
+  {
+    "type": "Line Graph",
+    "description": "Line Graphs are used to display quantitative values over a continuous interval or time period. A Line Graph is most frequently used to show trends and analyse how the data has changed over time.",
+    "source": "https://datavizcatalogue.com/methods/line_graph.html"
+  }
+]

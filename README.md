@@ -24,4 +24,6 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 # Semana 8
 - [Darme de alta Vercel](docs/vercel.md)
+- [Darme de alta en Netlify](docs/netlify.md)
+
 
