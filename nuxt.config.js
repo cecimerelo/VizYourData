@@ -16,6 +16,14 @@ export default {
         ],
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+        ],
+        "script": [
+            {
+                "src": "https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"
+            },
+            {
+                "src": "https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"
+            }
         ]
     },
 
