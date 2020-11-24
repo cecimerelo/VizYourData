@@ -119,5 +119,4 @@ dist
 
 # Firebase
 .firebase
-.firebaserc
 plugins/firebase_credentials.json
