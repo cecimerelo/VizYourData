@@ -1,4 +1,5 @@
 module.exports = {
+  verbose: true,
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
@@ -13,4 +14,9 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
+  moduleDirectories: [
+    "node_modules",
+    "src/",
+    "functions/"
+  ]
 }
