@@ -19,10 +19,5 @@
   },
   "remoteconfig": {
     "template": "remoteconfig.template.json"
-  },
-  "functions": {
-    "predeploy": [
-      "npm --prefix functions/ run lint"
-    ]
   }
 }
