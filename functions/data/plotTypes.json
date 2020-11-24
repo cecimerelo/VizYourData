@@ -1,0 +1,10 @@
+[
+  {
+    "key": "scatter",
+    "type": "Scatter Plot"
+  },
+  {
+    "key": "line",
+    "type": "Line Plot"
+  }
+]
