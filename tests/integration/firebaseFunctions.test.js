@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import supertest from 'supertest';
 
 
-const FIREBASE_CREDENTIALS_PATH = resolve('plugins/firebase_credentials.json')
+const FIREBASE_CREDENTIALS_PATH = resolve('firebase_credentials.json')
 
 const testEnv = require('firebase-functions-test')({
     databaseURL: 'https://viz-your-data.firebaseio.com',

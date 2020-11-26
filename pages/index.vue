@@ -37,11 +37,10 @@
             <v-divider></v-divider>
             <v-card-text style="height: 300px;">
               <v-radio-group
-                  v-model="dialogm1"
-                  column
+                  v-model="radioGroup"
               >
-                <v-radio v-for="type in plotTypes" :key="`${type} Plot`" :label="`${type} Plot`"
-                         :value="`${type.name} Plot`"></v-radio>
+                <v-radio v-for="type in plotTypes" :key="`${type}`" :label="`${type}`"
+                         :value="`${type}`"></v-radio>
               </v-radio-group>
             </v-card-text>
             <v-divider></v-divider>
@@ -67,18 +66,22 @@
     </v-app>
   </div>
 </template>
-
 <script>
+
 export default {
-  methods: {
-    async asyncData(context) {
-      const path = this.$nuxt.$route.resolve({path: '/plotTypes'});
-      const fullUrl = window.location.origin + "/" + path;
-      let response = await context.$axios.get(fullUrl);
-      let plotTypes = response.data.map(type => type.name);
-      return {
-        plotTypes
-      }
+  data() {
+    return {
+      plotTypes: [],
+    };
+  },
+  created () {
+    this.getData()
+  },
+  methods : {
+    async getData() {
+      this.$axios.$get('https://us-central1-viz-your-data.cloudfunctions.net/api/plotTypes').then(response => {
+        this.plotTypes = response
+      });
     }
   }
 }
