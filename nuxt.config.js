@@ -1,5 +1,3 @@
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin';
-
 const {VuetifyProgressiveModule} = require("vuetify-loader")
 
 export default {
@@ -15,7 +13,7 @@ export default {
             {hid: 'description', name: 'description', content: ''}
         ],
         link: [
-            {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+            {rel: 'shortcut icon', type: 'image/x-icon', href: ''}
         ],
         "script": [
             {
@@ -31,8 +29,7 @@ export default {
     css: [],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-    plugins: [
-        {src: '~/plugins/vuetify'}
+    plugins: [{src: '~/plugins/vuetify'}
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -43,10 +40,26 @@ export default {
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
-    modules: [
-        '@nuxtjs/vuetify'
-    ],
+    modules: ['@nuxtjs/axios', '@nuxtjs/vuetify', '@nuxtjs/firebase'],
 
+    firebase: {
+        config: {
+            apiKey: process.env.FIREBASE_API_KEY,
+            authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+            databaseURL: process.env.FIREBASE_DATABASE_URL,
+            projectId: process.env.FIREBASE_PROJECT_ID,
+            storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+            messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+            appId: process.env.FIREBASE_APP_ID,
+            measurementId: process.env.FIREBASE_MEASUREMENT_ID
+        },
+        services: {
+            functions: {
+                location: 'us-central1',
+                emulatorPort: 12345
+            },
+        }
+    },
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {
         extractCSS: true,
@@ -56,6 +69,13 @@ export default {
             const vueLoader = config.module.rules.find(
                 rule => rule.loader === "vue-loader"
             )
+
+            config.node = {
+                fs: 'empty',
+                child_process: 'empty',
+                net: 'empty',
+                tls: 'empty'
+            }
 
             vueLoader.options.compilerOptions = {
                 modules: [VuetifyProgressiveModule]

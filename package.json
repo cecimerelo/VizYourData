@@ -6,12 +6,19 @@
     "doc": "docs"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/firebase": "^7.1.1",
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
     "core-js": "^3.6.5",
     "firebase": "^8.0.2",
     "firebase-admin": "^9.4.1",
     "firebase-functions": "^3.11.0",
+    "fs": "0.0.1-security",
     "grunt-contrib-imagemin": "^4.0.0",
-    "nuxt": "^2.14.7"
+    "net": "^1.0.2",
+    "nuxt": "^2.14.7",
+    "tls": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -25,8 +32,12 @@
     "@nuxtjs/vuetify": "^1.11.2",
     "@types/node-fetch": "^2.5.7",
     "@vue/test-utils": "^1.1.0",
+    "axios": "^0.21.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.2",
     "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "dataframe-js": "^1.4.3",
     "del": "^6.0.0",

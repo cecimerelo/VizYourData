@@ -118,4 +118,4 @@ dist
 
 # Firebase
 .firebase
-plugins/firebase_credentials.json
+firebase_credentials.json
