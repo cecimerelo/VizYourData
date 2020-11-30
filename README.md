@@ -26,4 +26,5 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 - [Darme de alta Vercel](docs/vercel.md)
 - [Uso de Firebase Functions](docs/firebase.md)
 - [Integración dentro del proyecto en general](docs/integracion_proyecto.md)
+- [Integración con un Front-end](docs/integracion-frontend.md)
 

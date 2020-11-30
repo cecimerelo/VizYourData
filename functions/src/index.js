@@ -34,6 +34,6 @@ app.get('/plotTypes', async (req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).send(result);
     }catch (error) {
-        res.status(500).send(error);
+        res.status(400).send(error);
     }
 });
