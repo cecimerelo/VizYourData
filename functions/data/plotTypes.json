@@ -1,10 +1,10 @@
 [
   {
-    "key": "scatter",
+    "key": "scatterPlot",
     "type": "Scatter Plot"
   },
   {
-    "key": "line",
+    "key": "linePlot",
     "type": "Line Plot"
   }
 ]

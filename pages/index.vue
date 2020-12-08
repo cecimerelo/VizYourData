@@ -7,82 +7,19 @@
 
     <v-app id="inspire">
       <p class="main-text">No graphics found...</p>
-
-      <v-row justify="center">
-        <v-dialog
-            v-model="dialog"
-            scrollable
-            max-width="300px"
-        >
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn rounded
-                   icon
-                   fab
-                   bottom
-                   right
-                   absolute
-                   class="add-btn"
-                   dark
-                   v-bind="attrs"
-                   v-on="on"
-            >
-              <v-icon dark>
-                mdi-plus
-              </v-icon>
-            </v-btn>
-          </template>
-
-          <v-card>
-            <v-card-title>Select Plot Type</v-card-title>
-            <v-divider></v-divider>
-            <v-card-text style="height: 300px;">
-              <v-radio-group
-                  v-model="radioGroup"
-              >
-                <v-radio v-for="type in plotTypes" :key="`${type}`" :label="`${type}`"
-                         :value="`${type}`"></v-radio>
-              </v-radio-group>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-actions>
-              <v-btn
-                  color="blue darken-1"
-                  text
-                  @click="dialog = false"
-              >
-                Close
-              </v-btn>
-              <v-btn
-                  color="blue darken-1"
-                  text
-                  @click="dialog = false"
-              >
-                Save
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
-      </v-row>
+      <addPlotComponent/>
     </v-app>
   </div>
 </template>
+
+<script src="/__/firebase/init.js"></script>
+
 <script>
+import addPlotComponent from "@/components/addPlotComponent";
 
 export default {
-  data() {
-    return {
-      plotTypes: [],
-    };
-  },
-  created () {
-    this.getData()
-  },
-  methods : {
-    async getData() {
-      this.$axios.$get('https://us-central1-viz-your-data.cloudfunctions.net/api/plotTypes').then(response => {
-        this.plotTypes = response
-      });
-    }
+  components: {
+    addPlotComponent,
   }
 }
 </script>
@@ -99,8 +36,4 @@ export default {
   color: gray;
 }
 
-.add-btn {
-  background-color: #35495e;
-  margin-bottom: 100px;
-}
 </style>

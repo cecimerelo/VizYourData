@@ -28,7 +28,7 @@ app.get('/plotTypes', async (req, res) => {
             result = data.filter(types => types.key === type);
         } else {
             data.forEach((plotType) => {
-                result.push(plotType.type);
+                result.push(plotType);
             });
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
