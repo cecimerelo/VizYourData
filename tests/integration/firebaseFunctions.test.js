@@ -35,7 +35,7 @@ describe("Test my functions", () => {
         let plotTypes = [];
 
         data.forEach((plotType) => {
-            plotTypes.push(plotType.type);
+            plotTypes.push(plotType);
         });
 
         return plotTypes;
