@@ -12,6 +12,8 @@
   </div>
 </template>
 
+<script src="/__/firebase/init.js"></script>
+
 <script>
 import addPlotComponent from "@/components/addPlotComponent";
 
