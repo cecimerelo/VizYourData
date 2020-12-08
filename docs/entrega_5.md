@@ -1,0 +1,4 @@
+- [Darme de alta Vercel](vercel.md)
+- [Uso de Firebase Functions](firebase.md)
+- [Integración dentro del proyecto en general](integracion_proyecto.md)
+- [Integración con un Front-end](integracion-frontend.md)

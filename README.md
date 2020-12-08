@@ -22,9 +22,8 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [6. Rúbricas de la entrega 4](docs/entrega_4.md)
 
-# Semana 8
-- [Darme de alta Vercel](docs/vercel.md)
-- [Uso de Firebase Functions](docs/firebase.md)
-- [Integración dentro del proyecto en general](docs/integracion_proyecto.md)
-- [Integración con un Front-end](docs/integracion-frontend.md)
+[6. Rúbricas de la entrega 5](docs/entrega_5.md)
+
+# Semana 9
+
 
