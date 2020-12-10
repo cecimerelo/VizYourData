@@ -1,10 +1,10 @@
 <template>
   <div class="type-cards">
-    <slide-out :visible.sync="open" :title="'Select Plot Types'" size="600px" allow-resize
+    <slide-out :visible.sync="openPanel" :title="'Select Plot Types'" size="600px" allow-resize
                :fullscreen.sync="fullscreen" append-to="body" show-fullscreen fixed>
       <ul>
         <li v-for="plotType in plotTypes" class="plot-type-item">
-          <plotTypeCard
+          <plotTypeCard @clicked-add-plot="onClickChild"
               :plotType='plotType.type'
               :plotKey='plotType.key'
           />
@@ -36,14 +36,14 @@
 import plotTypeCard from "@/components/plotTypeCard";
 
 export default {
-  name: "addPlotComponent",
+  name: "addPlotButtonComponent",
   components: {
     plotTypeCard
   },
 
   data() {
     return {
-      open: false,
+      openPanel: false,
       plotTypes: [],
       fullscreen: false
     };
@@ -52,8 +52,12 @@ export default {
   methods: {
 
     onClick() {
-      this.open = true;
+      this.openPanel = true;
       this.getData()
+    },
+
+    onClickChild(value) {
+      this.openPanel = value;
     },
 
     getData() {

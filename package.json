@@ -20,6 +20,10 @@
     "grunt-contrib-imagemin": "^4.0.0",
     "net": "^1.0.2",
     "nuxt": "^2.14.7",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "restify": "^8.5.1",
+    "sequelize": "^6.3.5",
     "tls": "0.0.1",
     "vue2-slideout-panel": "^2.13.0"
   },

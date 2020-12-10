@@ -26,4 +26,6 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 # Semana 9
 
+[1. Justificación técnica del framework elegido para el microservicio con documentación sobre cómo se usa en la práctica](docs/microservicio.md)
+
 

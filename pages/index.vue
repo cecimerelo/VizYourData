@@ -7,7 +7,7 @@
 
     <v-app id="inspire">
       <p class="main-text">No graphics found...</p>
-      <addPlotComponent/>
+      <addPlotButtonComponent/>
     </v-app>
   </div>
 </template>
@@ -15,11 +15,11 @@
 <script src="/__/firebase/init.js"></script>
 
 <script>
-import addPlotComponent from "@/components/addPlotComponent";
+import addPlotButtonComponent from "@/components/addPlotButtonComponent";
 
 export default {
   components: {
-    addPlotComponent,
+    addPlotButtonComponent,
   }
 }
 </script>
