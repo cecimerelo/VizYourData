@@ -1,25 +1,26 @@
-import getPlotTypeDefinitionUseCase from "@/src/modules/Plots/useCases/getPlotTypeDefinitionUseCase";
 
-const errors = require('restify-errors');
 const restify = require('restify');
-const config = require('../config');
+const getPlotTypeDefinitionUseCase = require('../src/modules/Plots/useCases/getPlotTypeDefinitionUseCase');
+
+function respond(req, res, next) {
+
+    const plotType = req.params.plotType;
+    const use_case = new getPlotTypeDefinitionUseCase(plotType);
+    use_case.run();
+
+    const definitionFields = use_case.getDefinitionFields();
+
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.send(definitionFields);
+    next();
+}
 
 const server = restify.createServer();
-server.use(restify.plugins.bodyParser());
-server.listen(config.PORT)
+server.get('/definitions/:plotType', respond);
 
-server.get('/definitions/:plotType', (req, res, next) => {
-    try {
-        const plotType = req.params.plotType;
-        const use_case = new getPlotTypeDefinitionUseCase(plotType);
-        use_case.run();
-
-        const definitionFields = use_case.getDefinitionFields();
-        res.send(definitionFields);
-        next();
-    } catch (err) {
-        return next(new errors.InvalidContentError(err));
-    }
+server.listen(8081, function() {
+    console.log('%s listening at %s', server.name, server.url);
 });
 
 module.exports = server;

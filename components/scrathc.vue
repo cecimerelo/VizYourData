@@ -113,28 +113,28 @@
   </v-row>
 </template>
 
-const bodyParser = require('body-parser')
-const app = require('express')()
+import getPlotTypeDefinitionUseCase from "@/src/modules/Plots/useCases/getPlotTypeDefinitionUseCase";
 
-const port = process.env.PORT || 3000;
+const errors = require('restify-errors');
+const restify = require('restify');
+const config = require('../config');
 
-app.listen(port, function () {
-console.log('Updated : Server listening at port %d', port);
+const server = restify.createServer();
+server.use(restify.plugins.bodyParser());
+server.listen(config.PORT)
+
+server.get('/definitions/:plotType', (req, res, next) => {
+try {
+const plotType = req.params.plotType;
+const use_case = new getPlotTypeDefinitionUseCase(plotType);
+use_case.run();
+
+const definitionFields = use_case.getDefinitionFields();
+res.send(definitionFields);
+next();
+} catch (err) {
+return next(new errors.InvalidContentError(err));
+}
 });
 
-app.use(bodyParser.json())
-app.all('/getJSON', (req, res) => {
-res.json({ data: 'data' })
-})
-
-module.exports = app
-
-const { Nuxt } = require('nuxt');
-import { resolve } from "path";
-
-const NUXT_CONFIG_PATH = resolve('nuxt.config.js');
-
-const config = require(NUXT_CONFIG_PATH);
-const nuxt = new Nuxt(config);
-
-const { host, port } = nuxt.options.server;
+module.exports = server;

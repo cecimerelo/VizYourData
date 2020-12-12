@@ -9,8 +9,8 @@ class getPlotTypeDefinitionUseCase {
     }
 
     getDefinitionFields() {
-        return JSON.stringify(this._definitionFields)
+        return this._definitionFields
     }
 }
 
-export default getPlotTypeDefinitionUseCase;
+module.exports = getPlotTypeDefinitionUseCase;

@@ -40,12 +40,10 @@ export default {
         '@nuxtjs/dotenv'
     ],
 
-    serverMiddleware: [
-        { path: "/api", handler: "~/api/server.js" },
-    ],
-
     // Modules (https://go.nuxtjs.dev/config-modules)
-    modules: ['@nuxtjs/axios', '@nuxtjs/vuetify', '@nuxtjs/firebase'],
+    modules: ['@nuxtjs/axios', '@nuxtjs/vuetify', '@nuxtjs/firebase', '@nuxt/http'],
+
+    http : {},
 
     firebase: {
         config: {

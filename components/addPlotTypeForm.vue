@@ -4,7 +4,8 @@
       <v-btn v-bind="attrs" v-on="on"
              outlined
              rounded
-             text @click="onClickAdd">
+             text
+             @click="onClickAdd">
         Add
       </v-btn>
     </template>
@@ -18,11 +19,31 @@
             <v-col cols="12"
                    sm="6"
                    md="4"
-                   v-for="plotField in plotFields" :class=`plot-field-${plotField}`>
+                   v-for="plotField in plotFields" class="plot-field" :key="`field-${plotField}`">
+              <v-text-field
+                  :label='plotField'
+              ></v-text-field>
             </v-col>
           </v-row>
         </v-container>
       </v-card-text>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+        >
+          Close
+        </v-btn>
+        <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+        >
+          Save
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
@@ -35,15 +56,16 @@ export default {
 
   data() {
     return {
+      dialog: true,
       plotFields: [],
     };
   },
 
   methods: {
     onClickAdd() {
-      this.$emit('clicked-add-plot', false)
-      const baseUrl = window.location.origin;
-      this.$axios.$get(`${baseUrl}/definitions/${this.$props.plotKey}`).then(response => {
+      this.$emit('clicked-add-plot', false);
+      const getUrl = window.location.hostname;
+      this.$http.$get(`http://${getUrl}:8081/definitions/${this.$props.plotKey}`).then(response => {
         this.plotFields = response
       });
     },
