@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 const chai = require('chai');
-const server = require('../../src/modules/Plots/views/plotRoutes')
+const server = require('../../api/server.js')
 const chaiHttp = require('chai-http');
 
 chai.use(chaiHttp);

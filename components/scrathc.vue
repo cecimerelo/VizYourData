@@ -112,3 +112,29 @@
     </v-dialog>
   </v-row>
 </template>
+
+const bodyParser = require('body-parser')
+const app = require('express')()
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+console.log('Updated : Server listening at port %d', port);
+});
+
+app.use(bodyParser.json())
+app.all('/getJSON', (req, res) => {
+res.json({ data: 'data' })
+})
+
+module.exports = app
+
+const { Nuxt } = require('nuxt');
+import { resolve } from "path";
+
+const NUXT_CONFIG_PATH = resolve('nuxt.config.js');
+
+const config = require(NUXT_CONFIG_PATH);
+const nuxt = new Nuxt(config);
+
+const { host, port } = nuxt.options.server;

@@ -8,7 +8,7 @@
       max-width="200px"
     ></v-img>
     <v-card-actions>
-      <addPlotTypeForm @clicked-add-plot="clickedAddPlot" :plotType=plotType />
+      <addPlotTypeForm @clicked-add-plot="clickedAddPlot" :plotType=plotType :plotKey=plotKey />
     </v-card-actions>
   </v-card>
 </template>
@@ -32,8 +32,5 @@ export default {
 </script>
 
 <style scoped>
-.plotForm {
-  position: absolute;
-  z-index: 100;
-}
+
 </style>
