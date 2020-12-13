@@ -19,8 +19,4 @@ function respond(req, res, next) {
 const server = restify.createServer();
 server.get('/definitions/:plotType', respond);
 
-server.listen(8081, function() {
-    console.log('%s listening at %s', server.name, server.url);
-});
-
 module.exports = server;

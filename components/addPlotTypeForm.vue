@@ -25,6 +25,12 @@
               ></v-text-field>
             </v-col>
           </v-row>
+          <v-row>
+            <v-file-input
+                placeholder="File with the data"
+                truncate-length="15"
+            ></v-file-input>
+          </v-row>
         </v-container>
       </v-card-text>
       <v-card-actions>
@@ -56,16 +62,17 @@ export default {
 
   data() {
     return {
-      dialog: true,
+      dialog: false,
       plotFields: [],
     };
   },
 
   methods: {
     onClickAdd() {
+      this.dialog=true;
       this.$emit('clicked-add-plot', false);
       const getUrl = window.location.hostname;
-      this.$http.$get(`http://${getUrl}:8081/definitions/${this.$props.plotKey}`).then(response => {
+      this.$http.$get(`http://${getUrl}:8080/definitions/${this.$props.plotKey}`).then(response => {
         this.plotFields = response
       });
     },
