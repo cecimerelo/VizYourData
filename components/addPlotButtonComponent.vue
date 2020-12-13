@@ -61,7 +61,8 @@ export default {
     },
 
     getData() {
-      this.$axios.$get('https://us-central1-viz-your-data.cloudfunctions.net/api/plotTypes').then(response => {
+      const getUrl = window.location.hostname;
+      this.$http.$get(`http://${getUrl}:8080/plotTypes`).then(response => {
         this.plotTypes = response
       });
     },
