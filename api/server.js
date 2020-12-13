@@ -1,6 +1,5 @@
-import restify from "restify";
-import errors from 'restify-errors';
-
+const restify = require('restify');
+const errors = require('restify-errors');
 const getPlotTypeDefinitionUseCase = require('../src/modules/Plots/useCases/getPlotTypeDefinitionUseCase');
 
 function getPlotFields(req, res, next) {
