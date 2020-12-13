@@ -32,7 +32,6 @@ export default {
     plugins: [
         {src: '~/plugins/vuetify'}, {src: '~/plugins/slideoutPanel'}
     ],
-
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
 
@@ -42,7 +41,9 @@ export default {
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
-    modules: ['@nuxtjs/axios', '@nuxtjs/vuetify', '@nuxtjs/firebase'],
+    modules: ['@nuxtjs/axios', '@nuxtjs/vuetify', '@nuxtjs/firebase', '@nuxt/http'],
+
+    http : {},
 
     firebase: {
         config: {
