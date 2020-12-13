@@ -18,4 +18,14 @@ describe('Test my Routes', () => {
 
     });
 
+    it('I should return an error', async (done) => {
+        chai.request(server)
+            .get('/definitions/')
+            .end((err, res) => {
+                expect(res.status).to.be.equal(400);
+                done();
+            });
+
+    });
+
 })
