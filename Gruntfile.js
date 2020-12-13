@@ -16,29 +16,10 @@ module.exports = function (grunt) {
                     '--silent'
                 ]
             },
-            deploy_firebase_functions: {
-                cmd: 'firebase',
-                args: [
-                    'deploy',
-                    '--only',
-                    'functions'
-                ]
-            },
-            init_functions_emulator: {
-                cmd: 'firebase',
-                args: [
-                    'emulators:start',
-                    '--only',
-                    'functions'
-                ]
-            }
-
         }
     });
 
     grunt.loadNpmTasks('grunt-run');
     grunt.registerTask('install', ['run:install']);
     grunt.registerTask('test', ['run:test']);
-    grunt.registerTask('deploy_firebase_functions', ['run:deploy_firebase_functions'])
-    grunt.registerTask('init_functions_emulator', ['run:init_functions_emulator'])
 };

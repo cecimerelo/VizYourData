@@ -22,11 +22,11 @@ El esqueleto básico para hacerlo funcionar es:
    ```
 1. Crear un servidor:
    ```node
-   const server = restify.createServer();
+   const routes = restify.createServer();
    ```
 1. Hacer que el servidor escuche en un puerto específico:
    ```node
-   server.listen(8080, function() {
+   routes.listen(8080, function() {
     console.log('Server listening at %s', 8080);
    });
    ```
