@@ -1,6 +1,7 @@
-
+const logger = require('./plugins/logger');
 const server = require('./api/routes.js');
 
+const message = 'Server listening at ' + 8080;
 server.listen(8080, function() {
-    console.log('Server listening at %s', 8080);
+    logger.log('INFO', message);
 });

@@ -30,7 +30,7 @@ export default {
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [
-        {src: '~/plugins/vuetify'}, {src: '~/plugins/slideoutPanel'}
+        {src: '~/plugins/vuetify'}, {src: '~/plugins/slideoutPanel'}, {src: '~/plugins/logger'}
     ],
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
@@ -44,6 +44,10 @@ export default {
     modules: ['@nuxtjs/axios', '@nuxtjs/vuetify', '@nuxt/http'],
 
     http : {},
+
+    winstonLog: {
+        autoCreateLogPath: false
+    },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {

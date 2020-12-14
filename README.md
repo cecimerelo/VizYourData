@@ -28,5 +28,7 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [1. Justificación técnica del framework elegido para el microservicio con documentación sobre cómo se usa en la práctica](docs/microservicio.md)
 
-[2.Diseño general de la API](docs/disenyo_api.md) 
+[2.Diseño general de la API](docs/disenyo_api.md)
+
+[3. uso de buenas prácticas: configuración distribuida, logs, uso de middleware](docs/uso_buenas_practicas.md)
 
