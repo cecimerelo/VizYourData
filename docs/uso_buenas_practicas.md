@@ -29,6 +29,10 @@ Aparece lo siguiente en Papertrail:
 
 ![](img/papertrail.png)
 
+Cuando la CI lanza los tests podemos confirmar que los logs funcionan:
+
+![](img/logs_test.png)
+
 ### Uso
 
 Por ahora, he añadido logs para cada llamada que se haga a la [API](https://github.com/cecimerelo/VizYourData/blob/main/api/routes.js),
