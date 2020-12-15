@@ -33,12 +33,16 @@ Cuando la CI lanza los tests podemos confirmar que los logs funcionan:
 
 ![](img/logs_test.png)
 
-### Uso
+## Middleware
 
-Por ahora, he añadido logs para cada llamada que se haga a la [API](https://github.com/cecimerelo/VizYourData/blob/main/api/routes.js),
-por ejemplo:
+Por último, añadimos un middleware, de manera que cada vez que se haga alguna request esta aparecerá en Papertrail. Lo
+que nos interesa es el endpoint al que se hace la llamada:
 
 ```node
-    const message = 'GET /plotTypes';
-    logger.log('INFO', message);
+routes.use(function (req,res,next) {
+    const request_method = req.method
+    const request_url = req.url
+    logger.log('INFO', `${request_method} ${request_url}` )
+    next()
+});
 ```
