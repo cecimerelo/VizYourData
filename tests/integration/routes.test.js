@@ -8,6 +8,10 @@ chai.use(chaiHttp);
 
 describe('Test my Routes', () => {
 
+    afterAll(async (done) => {
+        done();
+    });
+
     it('I should return the configuration for a record type', async (done) => {
         chai.request(server)
             .get('/definitions/scatterPlot')
