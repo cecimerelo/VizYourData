@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-
+const {expect} = require ('chai');
 const chai = require('chai');
 const server = require('../../api/routes.js')
 const chaiHttp = require('chai-http');
