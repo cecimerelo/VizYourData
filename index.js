@@ -2,7 +2,9 @@ const logger = require('./plugins/logger');
 const server = require('./api/routes.js');
 const {Etcd3} = require('etcd3');
 
-const CONFIG_URL = process.env.CONFIG_URL || 'http://localhost:8080';
+const ETCD_HOST = process.env.ETCD_IP;
+const ETCD_PORT = process.env.ETCD_PORT;
+const CONFIG_URL = `${ETCD_HOST}:${ETCD_PORT}` || 'http://localhost:8080';
 
 let port;
 
