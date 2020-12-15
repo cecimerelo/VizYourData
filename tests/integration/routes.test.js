@@ -7,8 +7,12 @@ const data = require('../../src/modules/Plots/useCases/data/plotTypes.json');
 chai.use(chaiHttp);
 
 describe('Test my Routes', () => {
+    beforeAll(done => {
+        done()
+    })
 
     afterAll(async (done) => {
+        server.close();
         done();
     });
 
