@@ -34,4 +34,4 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [4. Tests correctos y de acuerdo con las historias de usuario.](docs/tests_hu.md)
 
-[5. Concedidos por originalidad de la aplicación, grado de terminación...](docs/terminacion_6.md))
+[5. Concedidos por originalidad de la aplicación, grado de terminación...](docs/terminacion_6.md)
