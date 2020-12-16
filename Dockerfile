@@ -13,9 +13,7 @@ RUN mkdir $DIR /node_modules && chown -R node $DIR /node_modules
 
 # Instalamos a nivel global porque así lo establece Grunt
 RUN npm install -g grunt-cli
-RUN apt-get update
-RUN apt update && apt install -y build-essential
-RUN apt update && apt install make -y
+RUN apk update && apk add make
 
 # Copiamos el package,json en el contenedor y le cambiamos de owner al usuario node
 COPY --chown=node package.json ./
