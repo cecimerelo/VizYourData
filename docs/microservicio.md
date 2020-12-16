@@ -30,7 +30,7 @@ El esqueleto básico para hacerlo funcionar es:
     console.log('Server listening at %s', 8080);
    });
    ```
-   En mi caso he sacado esta función al fichero [index.js](https://github.com/cecimerelo/VizYourData/blob/main/index.js),
+   En mi caso he sacado esta función al fichero [app.js](https://github.com/cecimerelo/VizYourData/blob/main/index.js),
    para que a la hora de testear no tengamos que abrir ningún puerto, ya que lo único que nos interesa es testear las rutas
 
 Con esto ya tendríamos el servidor montado, a partir de ahí podríamos añadir las rutas que creamos necesarias.
