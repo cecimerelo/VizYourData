@@ -13,9 +13,8 @@ describe('Test my Routes', () => {
             .get('/definitions/scatterPlot')
             .end((err, res) => {
                 expect(res.body).to.be.an.instanceof(Array);
-                done();
             });
-
+        done();
     });
 
     it('I should return an error', async (done) => {
@@ -23,9 +22,8 @@ describe('Test my Routes', () => {
             .get('/definitions/')
             .end((err, res) => {
                 expect(res.status).to.be.equal(400);
-                done();
             });
-
+        done();
     });
 
     function _getPlotTypes() {
@@ -46,8 +44,8 @@ describe('Test my Routes', () => {
             .end((err, res) => {
                 expect(res.body).to.be.an.instanceof(Array);
                 expect(res.body.length).equals(expected_result.length);
-                done();
             });
+        done();
     })
 
 })
