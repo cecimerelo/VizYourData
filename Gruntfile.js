@@ -17,12 +17,8 @@ module.exports = function (grunt) {
                 ]
             },
             build: {
-                cmd: 'npm',
-                args: [
-                    'run',
-                    'build',
-                    '--silent'
-                ]
+                cmd: 'echo',
+                args: ['true']
             },
         }
     });
