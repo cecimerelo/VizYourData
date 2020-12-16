@@ -3,3 +3,4 @@ test: tests/unit/BuildScatterPlot.test.js
 entidad: src/modules/Plots/interfaces/BuildScatterPlotInterface.js
 taskfile: package.json
 URL: https://us-central1-viz-your-data.cloudfunctions.net/api/plotTypes
+make: make
