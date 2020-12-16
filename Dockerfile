@@ -13,7 +13,7 @@ RUN mkdir $DIR /node_modules && chown -R node $DIR /node_modules
 
 # Instalamos a nivel global porque así lo establece Grunt
 RUN npm install -g grunt-cli
-RUN sudo apt-get update
+RUN apt-get update
 RUN apt update && apt install -y build-essential
 RUN apt update && apt install make -y
 
