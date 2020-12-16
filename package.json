@@ -83,7 +83,7 @@
   },
   "scripts": {
     "dev": "nuxt & node app.js",
-    "build": "nuxt build & node app.js",
+    "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest"
