@@ -16,6 +16,7 @@ RUN npm install -g grunt-cli
 
 # Copiamos el package,json en el contenedor y le cambiamos de owner al usuario node
 COPY --chown=node package.json ./
+COPY --chown=node Makefile ./
 
 # Cambiamos de usuario a uno sin privilegios
 USER node
