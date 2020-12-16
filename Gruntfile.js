@@ -16,10 +16,19 @@ module.exports = function (grunt) {
                     '--silent'
                 ]
             },
+            build: {
+                cmd: 'npm',
+                args: [
+                    'run',
+                    'build',
+                    '--silent'
+                ]
+            },
         }
     });
 
     grunt.loadNpmTasks('grunt-run');
     grunt.registerTask('install', ['run:install']);
+    grunt.registerTask('build', ['run:build']);
     grunt.registerTask('test', ['run:test']);
 };
