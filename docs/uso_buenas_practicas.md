@@ -46,3 +46,8 @@ routes.use(function (req,res,next) {
     next()
 });
 ```
+
+## Configuración distribuida
+
+Hemos configurado Etcd para que las variables de entorno se cojan desde etcd, si no del entorno y, en última
+instancia, el valor por defecto. Se puede ver la configuración en el fichero [app.js](https://github.com/cecimerelo/VizYourData/blob/main/index.js)

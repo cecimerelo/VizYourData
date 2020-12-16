@@ -1,8 +1,6 @@
-const restify = require('restify');
 const errors = require('restify-errors');
 const getPlotTypeDefinitionUseCase = require('../src/modules/Plots/useCases/getPlotTypeDefinitionUseCase');
 const getPlotTypesUseCase = require("../src/modules/Plots/useCases/getPlotTypesUseCase");
-const logger = require('../plugins/logger');
 
 function getPlotFields(req, res, next) {
     const plotType = req.params.plotType;
@@ -34,17 +32,7 @@ function getPlotTypes(req, res,next) {
     next()
 }
 
-
-const routes = restify.createServer();
-
-routes.use(function (req,res,next) {
-    const request_method = req.method
-    const request_url = req.url
-    logger.log('INFO', `${request_method} ${request_url}` )
-    next()
-});
-
-routes.get('/definitions/:plotType', getPlotFields);
-routes.get('/plotTypes', getPlotTypes);
-
-module.exports = routes;
+module.exports = (server) => {
+    server.get('/definitions/:plotType', getPlotFields);
+    server.get('/plotTypes', getPlotTypes);
+}

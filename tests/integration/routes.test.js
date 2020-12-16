@@ -1,12 +1,20 @@
 const {expect} = require ('chai');
 const chai = require('chai');
-const server = require('../../api/routes.js')
 const chaiHttp = require('chai-http');
+const restify = require("restify");
+const routes = require('../../api/routes');
 const data = require('../../src/modules/Plots/useCases/data/plotTypes.json');
 
 chai.use(chaiHttp);
 
+const server = restify.createServer();
+routes(server)
+
 describe('Test my Routes', () => {
+
+    afterEach(() => {
+        server.close();
+    });
 
     it('I should return the configuration for a record type', async (done) => {
         chai.request(server)
@@ -15,7 +23,6 @@ describe('Test my Routes', () => {
                 expect(res.body).to.be.an.instanceof(Array);
                 done();
             });
-
     });
 
     it('I should return an error', async (done) => {
@@ -25,7 +32,6 @@ describe('Test my Routes', () => {
                 expect(res.status).to.be.equal(400);
                 done();
             });
-
     });
 
     function _getPlotTypes() {
