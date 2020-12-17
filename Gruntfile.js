@@ -3,9 +3,9 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         run: {
             install: {
-                cmd: 'npm',
+                cmd: 'echo',
                 args: [
-                    'install'
+                    'true'
                 ]
             },
             test: {
