@@ -27,7 +27,8 @@
     "tls": "0.0.1",
     "vue2-slideout-panel": "^2.13.0",
     "winston-papertrail": "^1.0.5",
-    "vuetify-loader": "^1.4.3"
+    "vuetify-loader": "^1.4.3",
+    "vuetify": "^2.3.17"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -78,7 +79,6 @@
     "vue": "^2.6.12",
     "vue-cli-plugin-vuetify": "^2.0.7",
     "vue-jest": "^3.0.4",
-    "vuetify": "^2.3.17",
     "winston": "^3.3.3"
   },
   "scripts": {
