@@ -11,7 +11,7 @@ server.use(function (req, res, next) {
     next()
 });
 
-const port = config.PORT;
+const port = config.PORT || process.env.PORT / 8080;
 const message = 'Server listening at ' + port;
 server.listen(port, function () {
     logger.log('INFO', message);
