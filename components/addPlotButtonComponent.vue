@@ -34,6 +34,10 @@
 <script>
 
 import plotTypeCard from "@/components/plotTypeCard";
+const { Nuxt } = require('nuxt')
+
+const nuxt = new Nuxt(config)
+const { port } = nuxt.options.server
 
 export default {
   name: "addPlotButtonComponent",
@@ -62,7 +66,9 @@ export default {
 
     getData() {
       const getUrl = window.location.hostname;
-      this.$http.$get(`http://${getUrl}:3000/plotTypes`).then(response => {
+      const url = `http://${getUrl}:${port}/plotTypes`;
+      console.log(url);
+      this.$http.$get(url).then(response => {
         this.plotTypes = response
       });
     },
