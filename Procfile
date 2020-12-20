@@ -1,1 +1,1 @@
-web: nuxt start & node server/app.js
+web: npm run start
