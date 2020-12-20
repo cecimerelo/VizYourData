@@ -1,6 +1,6 @@
 const errors = require('restify-errors');
-const getPlotTypeDefinitionUseCase = require('../src/modules/Plots/useCases/getPlotTypeDefinitionUseCase');
-const getPlotTypesUseCase = require("../src/modules/Plots/useCases/getPlotTypesUseCase");
+const getPlotTypeDefinitionUseCase = require('../../src/modules/Plots/useCases/getPlotTypeDefinitionUseCase');
+const getPlotTypesUseCase = require("../../src/modules/Plots/useCases/getPlotTypesUseCase");
 
 function getPlotFields(req, res, next) {
     const plotType = req.params.plotType;

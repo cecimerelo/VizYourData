@@ -2,7 +2,7 @@ const {expect} = require ('chai');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const restify = require("restify");
-const routes = require('../../api/routes');
+const routes = require('../../server/api/routes');
 const data = require('../../src/modules/Plots/useCases/data/plotTypes.json');
 
 chai.use(chaiHttp);

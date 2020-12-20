@@ -1,12 +1,12 @@
 const {VuetifyProgressiveModule} = require("vuetify-loader")
 
-export default {
+module.exports = {
     // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
     ssr: false,
 
     server: {
-        port: process.env.PROD_PORT || 3000, // default: 3000
-        host: '0.0.0.0' // default: localhost
+        host: '127.0.0.1', // default: 127.0.0.1
+        port: 8080, // default: 3000
     },
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -35,7 +35,7 @@ export default {
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [
-        {src: '~/plugins/vuetify'}, {src: '~/plugins/slideoutPanel'}, {src: '~/plugins/logger'}
+        {src: '~/plugins/vuetify'}, {src: '~/plugins/slideoutPanel'}
     ],
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,

@@ -62,7 +62,7 @@ export default {
 
     getData() {
       const getUrl = window.location.hostname;
-      this.$http.$get(`http://${getUrl}:8080/plotTypes`).then(response => {
+      this.$http.$get(`http://${getUrl}:3000/plotTypes`).then(response => {
         this.plotTypes = response
       });
     },

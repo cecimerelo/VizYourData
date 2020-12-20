@@ -72,7 +72,7 @@ export default {
       this.dialog=true;
       this.$emit('clicked-add-plot', false);
       const getUrl = window.location.hostname;
-      this.$http.$get(`http://${getUrl}:8080/definitions/${this.$props.plotKey}`).then(response => {
+      this.$http.$get(`http://${getUrl}:3000/definitions/${this.$props.plotKey}`).then(response => {
         this.plotFields = response
       });
     },

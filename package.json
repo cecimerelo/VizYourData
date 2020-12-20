@@ -46,6 +46,7 @@
     "babel-jest": "^26.5.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "consola": "^2.15.0",
     "dataframe-js": "^1.4.3",
     "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
@@ -62,12 +63,13 @@
     "load-grunt-tasks": "^5.1.0",
     "mocha": "^8.2.1",
     "restify-router": "^0.6.2",
-    "supertest": "^6.0.1"
+    "supertest": "^6.0.1",
+    "vue-jest": "^3.0.7"
   },
   "scripts": {
-    "dev": "nuxt & node app.js",
+    "dev": "nuxt & node server/app.js",
     "build": "nuxt build",
-    "start": "nuxt start & node app.js",
+    "start": "nuxt start & node server/app.js",
     "generate": "nuxt generate",
     "test": "jest"
   },
