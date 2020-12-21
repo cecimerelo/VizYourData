@@ -12,14 +12,14 @@ const {setKey} = require('../plugins/etcd');
 nuxtConfig.dev = process.env.NODE_ENV !== 'production'
 
 async function start() {
-    // Init Nuxt.js
+    // Iniciar Nuxt
     const nuxt = new Nuxt(config);
     const {host, port} = nuxt.options.server;
 
+    // Set variables Host y port en etcd.
     await setKey('HOST', host);
     await setKey('PORT', port);
 
-    // Build only in dev mode
     if (config.dev) {
         const builder = new Builder(nuxt)
         await builder.build()
@@ -27,6 +27,7 @@ async function start() {
         await nuxt.ready()
     }
 
+    // Configurar middleware. Con esto cada vez que se haga una llamada a una ruta se logueará en Papertrail
     app.use(function (req, res, next) {
         const request_method = req.method
         const request_url = req.url
@@ -34,12 +35,14 @@ async function start() {
         next()
     });
 
-    // Listen the server
+    // Hacemos que el servidor escuche el el puerto especificado, para poder hacer las solicitudes
     app.listen(port)
+
     consola.ready({
         message: `Server listening on: http://${host}:${port}`,
         badge: true
     })
+    // Pasamos al módulo de rutas el servidor con el que las definiremos
     routes(app);
 }
 
