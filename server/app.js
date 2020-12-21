@@ -2,18 +2,22 @@ const restify = require("restify");
 const logger = require('../plugins/logger');
 const routes = require('./api/routes');
 const config = require('../config')
-const { Nuxt, Builder } = require('nuxt')
+const {Nuxt, Builder} = require('nuxt')
 const app = restify.createServer();
 const consola = require('consola')
 
 // Import and Set Nuxt.js options
 const nuxtConfig = require('../nuxt.config.js')
+const {setKey} = require('../plugins/etcd');
 nuxtConfig.dev = process.env.NODE_ENV !== 'production'
 
-async function start () {
+async function start() {
     // Init Nuxt.js
-    const nuxt = new Nuxt(config)
-    const { host, port } = nuxt.options.server
+    const nuxt = new Nuxt(config);
+    const {host, port} = nuxt.options.server;
+
+    await setKey('HOST', host);
+    await setKey('PORT', port);
 
     // Build only in dev mode
     if (config.dev) {
@@ -38,4 +42,5 @@ async function start () {
     })
     routes(app);
 }
+
 start()
