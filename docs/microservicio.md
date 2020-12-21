@@ -22,15 +22,23 @@ El esqueleto básico para hacerlo funcionar es:
    ```
 1. Crear un servidor:
    ```node
-   const routes = restify.createServer();
+   const app = restify.createServer();
    ```
 1. Hacer que el servidor escuche en un puerto específico:
    ```node
-   routes.listen(8080, function() {
-    console.log('Server listening at %s', 8080);
-   });
+    app.listen(port)
    ```
-   En mi caso he sacado esta función al fichero [app.js](https://github.com/cecimerelo/VizYourData/blob/main/index.js),
-   para que a la hora de testear no tengamos que abrir ningún puerto, ya que lo único que nos interesa es testear las rutas
+   El puerto vendrá dado por Nuxt, y este valor será el que añadiremos a Etcd.
+1. Enlazar con la definición de las rutas:
+   ```node
+    // Pasamos al módulo de rutas el servidor con el que las definiremos
+    routes(app);
+   ```
 
-Con esto ya tendríamos el servidor montado, a partir de ahí podríamos añadir las rutas que creamos necesarias.
+Haciéndolo de esta manera separamos la creación del servidor de la definición de las rutas, ya que sino la integración
+continua da problemas, ya que el servidor se queda abierto, lo que conlleva a que la ejecución de los tests nunca
+acabe. Además, a la hora de testear podremos testear directamente la funcionalidad de las rutas sin necesidad de levantar
+el servidor.
+
+Servidor: https://github.com/cecimerelo/VizYourData/blob/main/server/app.js
+Rutas: https://github.com/cecimerelo/VizYourData/blob/main/server/api/routes.js
