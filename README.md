@@ -22,16 +22,19 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [6. Rúbricas de la entrega 4](docs/entrega_4.md)
 
-[6. Rúbricas de la entrega 5](docs/entrega_5.md)
+[7. Rúbricas de la entrega 5](docs/entrega_5.md)
 
-# Semana 9
+[8. Rúbricas de la entrega 6](docs/entrega_6.md)
 
-[1. Justificación técnica del framework elegido para el microservicio con documentación sobre cómo se usa en la práctica](docs/microservicio.md)
+# Milestone 7
 
-[2. Diseño general de la API](docs/disenyo_api.md)
+[1. Descripción y justificación de las herramientas usadas para desplegar la aplicación en en PaaS]()
 
-[3. Uso de buenas prácticas: configuración distribuida, logs, uso de middleware](docs/uso_buenas_practicas.md)
+[2. Descripción correcta de la configuración para despliegue automático, desde el repositorio o desde el sistema de integración continua.]()
 
-[4. Tests correctos y de acuerdo con las historias de usuario.](docs/tests_hu.md)
+[3. Funcionamiento correcto del despliegue en el PaaS (no sólo el status). Es decir, no se puede devolver ningún status 500.]()
 
-[5. Concedidos por originalidad de la aplicación, grado de terminación...](docs/terminacion_6.md)
+[4. Buenas prácticas en el diseño del API, incluyendo su correspondencia correcta con diferentes HUs.]()
+
+[5. Uso correcto de bases de datos y logs dentro del PaaS, incluyendo su justificación y pruebas de prestaciones, así 
+como avance general y grado de terminación de la aplicación]()
