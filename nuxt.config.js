@@ -70,7 +70,8 @@ module.exports = {
                 fs: 'empty',
                 child_process: 'empty',
                 net: 'empty',
-                tls: 'empty'
+                tls: 'empty',
+                dns: 'empty'
             }
 
             vueLoader.options.compilerOptions = {

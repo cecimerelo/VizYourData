@@ -1,4 +1,4 @@
-const logger = require("../plugins/logger");
+const logger = require("./logger");
 const { Etcd3 } = require('etcd3');
 const client = new Etcd3();
 
