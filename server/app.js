@@ -1,12 +1,13 @@
 const fs = require('fs')
 const restify = require('restify')
 const consola = require('consola')
-const config = require('../nuxt.config')
+const dotenv = require('dotenv')
 const routes = require('./api/routes')
 const middleware = require('./middleware')
+dotenv.config()
 
 const app = restify.createServer()
-const { host, port } = { host: config.server.host, port: 8080 }
+const { host, port } = { host: process.env.HOST, port: 8080 }
 
 // Set variables Host y port en etcd.
 const serverConfigKeys = { HOST: host, PORT: port }
