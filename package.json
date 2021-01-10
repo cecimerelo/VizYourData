@@ -6,6 +6,7 @@
   "directories": {
     "doc": "docs"
   },
+  "main": "server/app.js",
   "engines": {
     "node": "14.15.4"
   },
@@ -72,9 +73,9 @@
     "vue-jest": "^3.0.7"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt & node server/app.js",
     "build": "nuxt build",
-    "start": "nuxt start & node server/app.js",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
