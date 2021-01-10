@@ -1,49 +1,29 @@
-const restify = require("restify");
-const logger = require('../plugins/logger');
-const routes = require('./api/routes');
-const config = require('../config')
-const {Nuxt, Builder} = require('nuxt')
-const app = restify.createServer();
+const fs = require('fs')
+const restify = require('restify')
 const consola = require('consola')
+const routes = require('./api/routes')
+const middleware = require('./middleware')
 
-// Import and Set Nuxt.js options
-const nuxtConfig = require('../nuxt.config.js')
-const {setKey} = require('../plugins/etcd');
-nuxtConfig.dev = process.env.NODE_ENV !== 'production'
+const app = restify.createServer()
 
-async function start() {
-    // Iniciar Nuxt
-    const nuxt = new Nuxt(config);
-    const {host, port} = nuxt.options.server;
+const { host, port } = { host: 'localhost', port: 8080 }
 
-    // Set variables Host y port en etcd.
-    await setKey('HOST', host);
-    await setKey('PORT', port);
+// Set variables Host y port en etcd.
+const serverConfigKeys = { PORT: port }
+const serverConfigKeysJson = JSON.stringify(serverConfigKeys)
 
-    if (config.dev) {
-        const builder = new Builder(nuxt)
-        await builder.build()
-    } else {
-        await nuxt.ready()
-    }
+fs.writeFileSync('./static/server_config_keys.json', serverConfigKeysJson, 'utf8')
 
-    // Configurar middleware. Con esto cada vez que se haga una llamada a una ruta se logueará en Papertrail
-    app.use(function (req, res, next) {
-        const request_method = req.method
-        const request_url = req.url
-        logger.log('INFO', `${request_method} ${request_url}`)
-        next()
-    });
+// Hacemos que el servidor escuche el el puerto especificado, para poder hacer las solicitudes
+app.listen(port)
 
-    // Hacemos que el servidor escuche el el puerto especificado, para poder hacer las solicitudes
-    app.listen(port)
+// configuramos el middleware
+middleware(app)
 
-    consola.ready({
-        message: `Server listening on: http://${host}:${port}`,
-        badge: true
-    })
-    // Pasamos al módulo de rutas el servidor con el que las definiremos
-    routes(app);
-}
+consola.ready({
+  message: `Server listening on: http://${host}:${port}`,
+  badge: true
+})
 
-start()
+// Pasamos al módulo de rutas el servidor con el que las definiremos
+routes(app)

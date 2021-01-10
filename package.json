@@ -1,12 +1,13 @@
 {
   "name": "vizyourdata",
   "version": "1.0.0",
+  "private": true,
   "description": "Proyecto para la asignatura de Infraestructura Virtual 20-21 de la UGR",
   "directories": {
     "doc": "docs"
   },
   "engines": {
-    "node": "10.19.0"
+    "node": "14.15.4"
   },
   "dependencies": {
     "@babel/core": "^7.12.3",
@@ -24,8 +25,9 @@
     "core-js": "^3.6.5",
     "fs": "0.0.1-security",
     "grunt-contrib-imagemin": "^4.0.0",
-    "http2": "^3.3.7",
+    "jquery": "^3.5.1",
     "net": "^1.0.2",
+    "node-etcd": "^7.0.0",
     "nuxt": "^2.14.7",
     "nuxt-start": "^2.14.11",
     "plotly.js": "^1.56.0",
@@ -39,10 +41,12 @@
     "vuetify": "^2.3.17",
     "vuetify-loader": "^1.4.3",
     "winston": "^3.3.3",
-    "winston-papertrail": "^1.0.5"
+    "winston-syslog": "^2.4.4"
   },
   "devDependencies": {
     "@jest/globals": "^26.5.3",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.2",
     "chai": "^4.2.0",
@@ -52,8 +56,8 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "etcd3": "^1.1.0",
     "grunt": "^1.3.0",
     "grunt-env": "^1.0.1",
     "grunt-run": "^0.8.1",
@@ -68,12 +72,13 @@
     "vue-jest": "^3.0.7"
   },
   "scripts": {
-    "dev": "nuxt & node server/app.js",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start & node server/app.js",
     "generate": "nuxt generate",
-    "test": "jest",
-    "heroku-postbuild": "npm run build"
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "test": "jest"
   },
   "jest": {
     "testEnvironment": "jsdom",
