@@ -11,7 +11,7 @@ import json from '../static/server_config_keys.json'
 export default {
   mounted () {
     Vue.prototype.$port = json.PORT
-    Vue.prototype.$host = window.location.hostname
+    Vue.prototype.$host = json.PORT
   }
 }
 
