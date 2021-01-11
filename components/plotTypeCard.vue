@@ -4,31 +4,31 @@
       {{ plotType }}
     </v-card-title>
     <v-img
-      :src="require(`~/assets/img/icons/${plotKey}.jpg`)"
-      max-width="200px"
+        :src="require(`~/assets/img/icons/${plotKey}.jpg`)"
+        max-width="200px"
     ></v-img>
     <v-card-actions>
-      <addPlotTypeForm @clicked-add-plot="clickedAddPlot" :plotType=plotType :plotKey=plotKey />
+      <addPlotTypeForm @clicked-add-plot="clickedAddPlot" :plotType=plotType :plotKey=plotKey></addPlotTypeForm>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-import addPlotTypeForm from "@/components/addPlotTypeForm";
+import addPlotTypeForm from '@/components/addPlotTypeForm'
 
 export default {
-  name: "plotTypeCard",
-  props: ["plotType", "plotKey"],
-  components : {
-    addPlotTypeForm,
+  name: 'plotTypeCard',
+  components: {
+    addPlotTypeForm
   },
+  props: ['plotType', 'plotKey'],
 
   methods: {
-    clickedAddPlot(value) {
+    clickedAddPlot (value) {
       this.$emit('clicked-add-plot', value)
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>

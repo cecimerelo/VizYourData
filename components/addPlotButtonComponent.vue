@@ -1,27 +1,41 @@
 <template>
   <div class="type-cards">
-    <slide-out :visible.sync="openPanel" :title="'Select Plot Types'" size="600px" allow-resize
-               :fullscreen.sync="fullscreen" append-to="body" show-fullscreen fixed>
+    <slide-out
+      :visible.sync="openPanel"
+      :title="'Select Plot Types'"
+      size="600px"
+      allow-resize
+      :fullscreen.sync="fullscreen"
+      append-to="body"
+      show-fullscreen
+      fixed
+    >
       <ul>
-        <li v-for="plotType in plotTypes" class="plot-type-item">
-          <plotTypeCard @clicked-add-plot="onClickChild"
-              :plotType='plotType.type'
-              :plotKey='plotType.key'
+        <li
+          v-for="plotType in plotTypes"
+          :key="plotType.key"
+          class="plot-type-item"
+        >
+          <plotTypeCard
+            :plot-type="plotType.type"
+            :plot-key="plotType.key"
+            @clicked-add-plot="onClickChild"
           />
         </li>
       </ul>
     </slide-out>
 
     <div>
-      <v-btn rounded
-             icon
-             fab
-             bottom
-             right
-             absolute
-             class="add-btn"
-             dark
-             @click="onClick"
+      <v-btn
+        rounded
+        icon
+        fab
+        bottom
+        right
+        absolute
+        class="add-btn"
+        dark
+        @click="onClick"
       >
         <v-icon dark>
           mdi-plus
@@ -33,43 +47,39 @@
 
 <script>
 
-import plotTypeCard from "@/components/plotTypeCard";
-import {getKey} from "@/plugins/etcd";
+import plotTypeCard from '@/components/plotTypeCard'
 
 export default {
-  name: "addPlotButtonComponent",
+  name: 'AddPlotButtonComponent',
   components: {
     plotTypeCard
   },
 
-  data() {
+  data () {
     return {
       openPanel: false,
       plotTypes: [],
       fullscreen: false
-    };
+    }
   },
 
   methods: {
 
-    onClick() {
-      this.openPanel = true;
+    onClick () {
+      this.openPanel = true
       this.getData()
     },
 
-    onClickChild(value) {
-      this.openPanel = value;
+    onClickChild (value) {
+      this.openPanel = value
     },
 
-    async getData() {
-      const getUrl = window.location.hostname;
-      const port = await getKey('PORT');
-      const url = `http://${getUrl}:${port}/plotTypes`;
-      console.log(url);
-      this.$http.$get(url).then(response => {
+    getData () {
+      const url = `http://${this.$host}:${this.$port}/plotTypes`
+      this.$http.$get(url).then((response) => {
         this.plotTypes = response
-      });
-    },
+      })
+    }
   }
 }
 </script>
