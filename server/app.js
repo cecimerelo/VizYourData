@@ -7,7 +7,7 @@ const middleware = require('./middleware')
 dotenv.config()
 
 const app = restify.createServer()
-const { host, port } = { host: 'localhost', port: 8080 }
+const { host, port } = { host: 'https://viz-your-data-prod.herokuapp.com/', port: 8080 }
 
 // Set variables Host y port en etcd.
 const serverConfigKeys = { HOST: host, PORT: port }

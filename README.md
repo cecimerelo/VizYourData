@@ -28,7 +28,7 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 # Milestone 7
 
-[1. Descripción y justificación de las herramientas usadas para desplegar la aplicación en en PaaS]()
+[1. Descripción y justificación de las herramientas usadas para desplegar la aplicación en el PaaS.](docs/despliegue_paas.md)
 
 [2. Descripción correcta de la configuración para despliegue automático, desde el repositorio o desde el sistema de integración continua.]()
 
