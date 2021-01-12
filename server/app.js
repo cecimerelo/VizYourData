@@ -7,7 +7,7 @@ const middleware = require('./middleware')
 dotenv.config()
 
 const app = restify.createServer()
-const { host, port } = { host: '0.0.0.0', port: 8080 }
+const { host, port } = { host: process.env.HOST, port: 8080 }
 
 // Set variables Host y port en etcd.
 const serverConfigKeys = { HOST: host, PORT: port }
