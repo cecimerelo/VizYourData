@@ -75,8 +75,7 @@ export default {
     },
 
     getData () {
-      const url = `http://${this.$host}:${this.$port}/plotTypes`
-      this.$http.$get(url).then((response) => {
+      this.$axios.$get('/plotTypes').then((response) => {
         this.plotTypes = response
       })
     }
