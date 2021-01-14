@@ -4,18 +4,6 @@
   </div>
 </template>
 
-<script>
-import Vue from 'vue'
-import json from '../static/server_config_keys.json'
-
-export default {
-  mounted () {
-    Vue.prototype.$port = json.PORT
-    Vue.prototype.$host = json.HOST
-  }
-}
-
-</script>
 <style>
 html {
   font-family:

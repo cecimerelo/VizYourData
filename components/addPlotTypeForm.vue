@@ -77,8 +77,8 @@ export default {
     onClickAdd () {
       this.dialog = true
       this.$emit('clicked-add-plot', false)
-      const url = `http://${this.$host}:${this.$port}/definitions/${this.$props.plotKey}`
-      this.$http.$get(url).then((response) => {
+      const url = `/definitions/${this.$props.plotKey}`
+      this.$axios.$get(url).then((response) => {
         this.plotFields = response
       })
     }
