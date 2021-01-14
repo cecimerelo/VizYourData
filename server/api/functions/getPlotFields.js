@@ -2,6 +2,7 @@ const getPlotTypeDefinitionUseCase = require('../../../src/modules/Plots/useCase
 
 module.exports = function (req, res) {
   try {
+    console.log('h')
     const plotType = req.params.plotType
 
     if (!plotType.length) {

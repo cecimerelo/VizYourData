@@ -4,6 +4,6 @@ const getPlotFields = require('./functions/getPlotFields')
 app.get('/definitions/:plotType', getPlotFields)
 
 module.exports = {
-  path: '/',
+  path: ['/definitions/scatterPlot', '/definitions/linePlot'],
   handler: app
 }
