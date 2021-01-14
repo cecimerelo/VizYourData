@@ -4,11 +4,6 @@ const config = {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
-  server: {
-    port: 3000, // default: 3000
-    host: '0.0.0.0' // default: localhost
-  },
-
   serverMiddleware: [
     '~/server/middleware',
     {
