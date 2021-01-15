@@ -5,7 +5,7 @@ const config = {
   ssr: false,
 
   serverMiddleware: [
-    '~/server/middleware',
+    '~/server/middleware/index.js',
     {
       path: '/plotTypes',
       handler: '~/server/api/getPlotTypesRoute.js'
