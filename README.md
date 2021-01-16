@@ -30,7 +30,7 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [1. Descripción y justificación de las herramientas usadas para desplegar la aplicación en el PaaS.](docs/despliegue_paas.md)
 
-[2. Descripción correcta de la configuración para despliegue automático, desde el repositorio o desde el sistema de integración continua.]()
+[2. Descripción correcta de la configuración para despliegue automático, desde el repositorio o desde el sistema de integración continua.](docs/despliegue_ci.md)
 
 [3. Funcionamiento correcto del despliegue en el PaaS (no sólo el status). Es decir, no se puede devolver ningún status 500.]()
 
