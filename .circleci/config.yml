@@ -1,10 +1,8 @@
 version: 2.1
 orbs:
-  # Nos da acceso a heroku/deploy-via-git, este despliega la apliación directamente desde el repositorio de Github
+  # Nos da acceso a heroku/deploy-via-git, este despliega la aplicación directamente desde el repositorio de Github
   # a la cuenta de Heroku
   heroku: circleci/heroku@0.0.10
-  # Indicamos la con
-  node: circleci/node@4.1.0
 workflows:
   heroku_deploy:
     # define los trabajos que queremos correr en el proyecto

@@ -1,7 +1,7 @@
 ## PaaS
 
 He usado heroku como PaaS porque ofrece la posibilidad de integrar con muchas aplicaciones. En mi caso he añadido
-Papertrail que es la herramienta que elegía para el manejo de los logs. Además, el plan gratuito ofrece bastantes
+Papertrail que es la herramienta que elegí para el manejo de los logs. Además, el plan gratuito ofrece bastantes
 horas de actividad gratis:
 
 ![](img/heroku_billing.png)
@@ -65,7 +65,7 @@ Una vez construida la aplicación nos queda iniciarla. Esto lo hacemos en con el
 lo que hace es lanzar:
 
 ```json
-"start": "nuxt start & node server/app.js",
+"start": "nuxt start"
 ```
 
 ¿Pero como sabe Heroku que ese es el comando que tiene que lanzar? Se lo indicamos a través de un fichero llamado
