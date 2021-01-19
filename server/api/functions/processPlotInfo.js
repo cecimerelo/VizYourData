@@ -18,7 +18,7 @@ module.exports = function (req, res) {
 
       res.setHeader('Access-Control-Allow-Origin', '*')
       res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With')
-      res.send(scatterPlot)
+      res.status(201).send(scatterPlot)
     }
   } catch (e) {
     logger.log('info', e)
