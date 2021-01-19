@@ -29,3 +29,6 @@ En el caso de que la request cumpla todas las condiciones nos devolverá `status
 - Body: se puede ver un ejemplo [aquí](tests/files/test_scatter.json)
 
 ![](img/plotTypes_scatter_200.png)
+
+Además los tests de las rutas se pueden ver [aquí](https://github.com/cecimerelo/VizYourData/blob/main/tests/integration/routes.test.js).
+En ellos podemos ver que se comprueban 2 escenarios, cuando la request es correcta y cuando no.
