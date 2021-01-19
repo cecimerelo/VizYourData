@@ -32,9 +32,9 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 
 [2. Descripción correcta de la configuración para despliegue automático, desde el repositorio o desde el sistema de integración continua.](docs/despliegue_ci.md)
 
-[3. Funcionamiento correcto del despliegue en el PaaS (no sólo el status). Es decir, no se puede devolver ningún status 500.]()
+[3. Funcionamiento correcto del despliegue en el PaaS (no sólo el status). Es decir, no se puede devolver ningún status 500.](docs/funcionamiento_correcto.md)
 
-[4. Buenas prácticas en el diseño del API, incluyendo su correspondencia correcta con diferentes HUs.]()
+[4. Buenas prácticas en el diseño del API, incluyendo su correspondencia correcta con diferentes HUs.](docs/practicas_hus_api.md)
 
-[5. Uso correcto de bases de datos y logs dentro del PaaS, incluyendo su justificación y pruebas de prestaciones, así 
-como avance general y grado de terminación de la aplicación]()
+[5. Uso del logger](docs/middleware.md)
+Las HUs de este milestone están en: https://github.com/cecimerelo/VizYourData/milestone/7?closed=1

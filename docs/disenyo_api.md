@@ -36,7 +36,7 @@ los campos que habrá que rellenar obligatoriamente para poder construirla corre
 caso de que no se le pasara ningún parámetro se devolvería error `400`:
 
 ```node
-if(!plotType.length ){
+if(!plotType){
     return next(new errors.BadRequestError())
 }
 ```

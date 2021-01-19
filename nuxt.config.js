@@ -7,10 +7,17 @@ const config = {
   serverMiddleware: [
     '~/server/middleware/index.js',
     {
-      path: '/plotTypes',
+      path: ['/plotTypes'],
       handler: '~/server/api/getPlotTypesRoute.js'
     },
-    '~/server/api/getPlotFieldsRoute.js'
+    {
+      path: ['/plotTypes/scatter', '/plotTypes/line', '/plotTypes/'],
+      handler: '~/server/api/postPlotInfoRoute.js'
+    },
+    {
+      path: ['/definitions/scatter', '/definitions/line', '/definitions/'],
+      handler: '~/server/api/getPlotFieldsRoute.js'
+    }
   ],
 
   // Global page headers (https://go.nuxtjs.dev/config-head)

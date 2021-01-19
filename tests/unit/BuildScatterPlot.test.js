@@ -1,15 +1,13 @@
-import {describe, test} from "@jest/globals";
-import BuildScatterPlot from "../../src/modules/Plots/useCases/BuildScatterPlot";
-import { resolve } from "path";
+import { describe, test } from '@jest/globals'
+import BuildScatterPlotUseCase from '../../src/modules/Plots/useCases/BuildScatterPlotUseCase'
 
-const CSV_FILE_PATH = resolve("tests/files/2_TwoNum.csv");
+const JSON = require('../files/test_scatter.json')
+const JSON_DATA = JSON.data
 
-describe ('BuildScatterPlot', () => {
-
-    test('When run called with csv file, then returns a scatter plot', async () => {
-        const useCase = new BuildScatterPlot(CSV_FILE_PATH, 'GrLivArea', 'SalePrice');
-        const scatterPlot = await useCase.run()
-        expect(scatterPlot.type).toEqual('scatter');
-    });
-
-});
+describe('BuildScatterPlot', () => {
+  test('When run called with csv file, then returns a scatter plot', async () => {
+    const useCase = new BuildScatterPlotUseCase('GrLivArea', 'SalePrice', 'scatter', JSON_DATA)
+    const scatterPlot = await useCase.run()
+    expect(scatterPlot.type).toEqual('scatter')
+  })
+})

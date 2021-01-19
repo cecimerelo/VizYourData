@@ -15,6 +15,7 @@ jobs:
 
 Esto hará que cada vez que hagamos un push al repo de github se active el despliegue:
 
+![](img/pending_deploy.png)
 ![](img/github_deploy_heroku.png)
 
 Y en Circle CI se iniciará un workflow:
