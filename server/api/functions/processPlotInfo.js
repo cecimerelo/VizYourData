@@ -16,7 +16,7 @@ module.exports = function (req, res) {
       const useCase = new BuildScatterPlotUseCase(xAxis, yAxis, plotType, data)
       const scatterPlot = useCase.run()
 
-      res.setHeader('Location', '/plotTypes/scatter/' + 1)
+      res.location('/plotTypes/scatter/' + 1)
       res.setHeader('Access-Control-Allow-Origin', '*')
       res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With')
       res.status(201).send(scatterPlot)
