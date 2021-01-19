@@ -6,7 +6,6 @@
   "directories": {
     "doc": "docs"
   },
-  "main": "server/app.js",
   "engines": {
     "node": "14.15.4"
   },
@@ -75,7 +74,7 @@
     "vue-jest": "^3.0.7"
   },
   "scripts": {
-    "dev": "nuxt & node server/app.js",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

@@ -28,7 +28,8 @@
               class="plot-field"
             >
               <v-text-field
-                :label="plotField"
+                :label="`${plotField} *`"
+                required
               />
             </v-col>
           </v-row>
@@ -36,6 +37,7 @@
             <v-file-input
               placeholder="File with the data"
               truncate-length="15"
+              v-model="plotInfoDocument"
             />
           </v-row>
         </v-container>
@@ -52,7 +54,7 @@
         <v-btn
           color="blue darken-1"
           text
-          @click="dialog = false"
+          @click="sendPlotInfo"
         >
           Save
         </v-btn>
@@ -62,6 +64,7 @@
 </template>
 
 <script>
+/* eslint-disable prefer-const */
 export default {
   name: 'AddPlotTypeForm',
   props: ['plotType', 'plotKey'],
@@ -69,7 +72,8 @@ export default {
   data () {
     return {
       dialog: false,
-      plotFields: []
+      plotFields: [],
+      plotInfoDocument: null
     }
   },
 
@@ -81,6 +85,26 @@ export default {
       this.$axios.$get(url).then((response) => {
         this.plotFields = response
       })
+    },
+
+    sendPlotInfo () {
+      const config = {
+        headers: {
+          'Content-Type': undefined
+        }
+      }
+
+      const payload = {
+        file: this.plotInfoDocument
+
+      }
+      const url = `/plotTypes/${this.$props.plotKey}`
+      this.$axios.$post(url, payload, config).then(
+        (response) => {
+          this.dialog = false
+          console.log(response)
+        }
+      )
     }
   }
 }
