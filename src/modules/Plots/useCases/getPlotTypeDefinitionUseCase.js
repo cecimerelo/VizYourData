@@ -1,17 +1,17 @@
 class getPlotTypeDefinitionUseCase {
-    constructor(plotType) {
-        this._plotType = plotType;
-        this._definitionFields = null;
-    }
+  constructor (plotType) {
+    this._plotType = plotType
+    this._definitionFields = null
+  }
 
-    run() {
-        // TODO: separate depending the plot type
-        this._definitionFields = ['Title'];
-    }
+  run () {
+    // TODO: separate depending the plot type
+    this._definitionFields = ['Title', 'xAxis Name', 'yAxis Name']
+  }
 
-    getDefinitionFields() {
-        return this._definitionFields
-    }
+  getDefinitionFields () {
+    return this._definitionFields
+  }
 }
 
-module.exports = getPlotTypeDefinitionUseCase;
+module.exports = getPlotTypeDefinitionUseCase

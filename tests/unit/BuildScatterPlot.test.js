@@ -1,5 +1,5 @@
 import {describe, test} from "@jest/globals";
-import BuildScatterPlot from "../../src/modules/Plots/useCases/BuildScatterPlot";
+import BuildScatterPlotUseCase from "../../src/modules/Plots/useCases/BuildScatterPlotUseCase";
 import { resolve } from "path";
 
 const CSV_FILE_PATH = resolve("tests/files/2_TwoNum.csv");
@@ -7,7 +7,7 @@ const CSV_FILE_PATH = resolve("tests/files/2_TwoNum.csv");
 describe ('BuildScatterPlot', () => {
 
     test('When run called with csv file, then returns a scatter plot', async () => {
-        const useCase = new BuildScatterPlot(CSV_FILE_PATH, 'GrLivArea', 'SalePrice');
+        const useCase = new BuildScatterPlotUseCase(CSV_FILE_PATH, 'GrLivArea', 'SalePrice');
         const scatterPlot = await useCase.run()
         expect(scatterPlot.type).toEqual('scatter');
     });
