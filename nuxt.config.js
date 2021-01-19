@@ -17,6 +17,10 @@ const config = {
     {
       path: ['/definitions/scatter', '/definitions/line', '/definitions/'],
       handler: '~/server/api/getPlotFieldsRoute.js'
+    },
+    {
+      path: ['/plotTypes/scatter/1'],
+      handler: '~/server/api/getPlotInfoRoute.js'
     }
   ],
 
