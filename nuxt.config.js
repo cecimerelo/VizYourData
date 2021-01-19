@@ -11,11 +11,11 @@ const config = {
       handler: '~/server/api/getPlotTypesRoute.js'
     },
     {
-      path: ['/plotTypes/scatter', '/plotTypes/line'],
+      path: ['/plotTypes/scatter', '/plotTypes/line', '/plotTypes/'],
       handler: '~/server/api/postPlotInfoRoute.js'
     },
     {
-      path: ['/definitions/scatter', '/definitions/line'],
+      path: ['/definitions/scatter', '/definitions/line', '/definitions/'],
       handler: '~/server/api/getPlotFieldsRoute.js'
     }
   ],

@@ -7,7 +7,7 @@ module.exports = function (req, res) {
     const yAxis = req.body.y
     const data = req.body.data
 
-    if (!plotType.length || !xAxis || !yAxis) {
+    if (!plotType || !xAxis || !yAxis) {
       res.status(400).send({
         error: 'Parameters missing'
       })

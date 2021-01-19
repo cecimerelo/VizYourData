@@ -20,6 +20,7 @@ describe('Test /definitions/:plotType Route', () => {
   beforeAll(() => {
     app = express()
     app.get('/definitions/:plotType', getPlotFields)
+    app.get('/definitions/', getPlotFields)
   })
 
   it('I should return the configuration for a record type', (done) => {

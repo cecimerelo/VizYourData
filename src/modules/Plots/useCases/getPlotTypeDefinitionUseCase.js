@@ -6,7 +6,7 @@ class getPlotTypeDefinitionUseCase {
 
   run () {
     // TODO: separate depending the plot type
-    this._definitionFields = ['Title', 'xAxis Name', 'yAxis Name']
+    this._definitionFields = ['Title', 'xAxis', 'yAxis']
   }
 
   getDefinitionFields () {
