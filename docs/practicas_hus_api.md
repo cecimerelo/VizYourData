@@ -12,7 +12,7 @@ correctamente
     
 ## Rutas
 
-Se puede ver una imagen general de las rutas que están definidas en el [fichero de configuración de Nuxt](nuxt.config.js),
+Se puede ver una imagen general de las rutas que están definidas en el [fichero de configuración de Nuxt](https://github.com/cecimerelo/VizYourData/blob/hu/add_scatter_plot/nuxt.config.js),
 en el apartado de `serverMiddleware`. ¿Cómo funciona esto? Internamente Nuxt tiene una instancia de [connect](https://github.com/senchalabs/connect),
 esto lo que permite es registrar rutas adicionales sin la necesidad de un servidor externo.
 
@@ -60,7 +60,7 @@ se quieren ver en una gráfica y devuelve un objeto con los datos necesarios par
 está relacionada con la [HU45](https://github.com/cecimerelo/VizYourData/issues/45). En la HU se especifica que
 se quiere añadir una scatter plot al dashboard de la app, así que con esta ruta posteamos los datos con la que construirla.
 
-Los tests de esta ruta se pueden ver en [este](tests/integration/processPlotInfo.test.js) fichero.
+Los tests de esta ruta se pueden ver en [este](https://github.com/cecimerelo/VizYourData/blob/hu/add_scatter_plot/tests/integration/processPlotInfo.test.js) fichero.
 
 El resto de endpoints se explicaron en el [hito anterior](disenyo_api.md). Ahora ya no usamos Restify porque Nuxt 
 incorpora Express y se puede extender su funcionalidad muy fácilmente. Además ya no hace falta levantar el servidor 

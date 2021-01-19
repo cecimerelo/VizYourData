@@ -1,4 +1,5 @@
 import BuildScatterPlotUseCase from '../../../src/modules/Plots/useCases/BuildScatterPlotUseCase'
+import logger from '../../../src/commons/logger'
 
 module.exports = function (req, res) {
   try {
@@ -20,6 +21,6 @@ module.exports = function (req, res) {
       res.send(scatterPlot)
     }
   } catch (e) {
-    console.log(e)
+    logger.log('info', e)
   }
 }

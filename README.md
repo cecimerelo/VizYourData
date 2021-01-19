@@ -35,3 +35,6 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 [3. Funcionamiento correcto del despliegue en el PaaS (no sólo el status). Es decir, no se puede devolver ningún status 500.](docs/funcionamiento_correcto.md)
 
 [4. Buenas prácticas en el diseño del API, incluyendo su correspondencia correcta con diferentes HUs.](docs/practicas_hus_api.md)
+
+[5. Uso del logger](docs/middleware.md)
+Las HUs de este milestone están en: https://github.com/cecimerelo/VizYourData/milestone/7?closed=1

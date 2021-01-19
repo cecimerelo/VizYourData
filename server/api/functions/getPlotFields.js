@@ -1,3 +1,4 @@
+import logger from '../../../src/commons/logger'
 const getPlotTypeDefinitionUseCase = require('../../../src/modules/Plots/useCases/getPlotTypeDefinitionUseCase')
 
 module.exports = function (req, res) {
@@ -20,6 +21,6 @@ module.exports = function (req, res) {
       res.send(definitionFields)
     }
   } catch (e) {
-    console.log(e)
+    logger.log('info', e)
   }
 }

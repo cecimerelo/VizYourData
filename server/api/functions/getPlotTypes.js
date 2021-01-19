@@ -1,3 +1,4 @@
+import logger from '../../../src/commons/logger'
 const GetPlotTypesUseCase = require('../../../src/modules/Plots/useCases/getPlotTypesUseCase')
 
 module.exports = function (req, res) {
@@ -10,6 +11,6 @@ module.exports = function (req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With')
     res.send(plotTypes)
   } catch (e) {
-    console.log(e)
+    logger.log('info', e)
   }
 }
