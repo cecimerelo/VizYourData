@@ -6,7 +6,7 @@ URL: https://us-central1-viz-your-data.cloudfunctions.net/api/plotTypes
 PaaS: https://viz-your-data-prod.herokuapp.com/
 make: grunt
 recurso:
-  nombre: /plotTypes/scatter
+  nombre: plotTypes/scatter
   metodo: POST
   payload:
     x: GrLivArea,
