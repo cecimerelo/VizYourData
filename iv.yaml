@@ -9,8 +9,8 @@ recurso:
   nombre: plotTypes/scatter
   metodo: POST
   payload:
-    x: GrLivArea,
-    y: SalePrice,
+    x: GrLivArea
+    y: SalePrice
     data:
       - GrLivArea: 1710
         SalePrice: 208500
