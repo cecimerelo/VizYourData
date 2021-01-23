@@ -37,4 +37,6 @@ y cómo quieres visualizarlos y sea capaz de sacarte el gráfico.
 [4. Buenas prácticas en el diseño del API, incluyendo su correspondencia correcta con diferentes HUs.](docs/practicas_hus_api.md)
 
 [5. Uso del logger](docs/middleware.md)
+
+
 Las HUs de este milestone están en: https://github.com/cecimerelo/VizYourData/milestone/7?closed=1
